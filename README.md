@@ -13,9 +13,7 @@ Want to make text messages for your story, but need an Android looking interface
 
 Want to make high quality looking tweets your characters make in the story? Use the Twitter and Instagram mockups, complete with highlightable text and emoji support.
 
-![Sample Tweet](sample_tw.png)
-
-![Sample Instagram](sample_im.png)
+![Sample Tweet](sample_twim.png)
 
 Note: The Twitter and Instagram formats were based off of designs as of January 2017.
 

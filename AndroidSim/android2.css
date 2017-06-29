@@ -1,0 +1,137 @@
+.hide {
+    display: none;
+}
+
+/* GENERAL */
+.phoneAND {
+    width: 320px;
+    font-family: "Roboto", "Noto", Arial, sans-serif;
+    margin: 20px auto;
+}
+
+.iconWrapperAND {
+    display: block;
+    width: 60px;
+    position: relative;
+    text-align: center;
+}
+
+.iconAND{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: .1em;
+    position: relative;
+}
+
+.timestampAND {
+    font-size: smaller;
+    opacity: 0.5;
+}
+
+/* HEADER & BODY */
+.headerAND {
+    background-color: #1993E6;
+    color: #FFFFFF;
+    width: 320px;
+    font-size: large;
+    padding: .5em 0 .5em .5em;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    text-align: left;
+    text-transform: capitalize;
+    line-height: 30px;
+    display: table;
+    box-shadow: 0 7px 10px -3px #aaa;
+}
+
+.messagebodyAND {
+    list-style: none;
+    background-color: #EFEDEB;
+    margin: -2em 0 0 0;
+    padding: .5em 0 .5em 0;
+}
+
+.messagebodyAND li {
+    padding: .5em;
+    overflow: hidden;
+    display: flex;
+}
+
+/* REPLY */
+
+.replyWrapperAND{
+    margin: 0;
+    padding: 0;
+}
+
+.replyAND {
+    width: 200px;
+    background: #FEFEFE;
+    color: #000000;
+    padding: .7em;
+    border-radius: .2em;
+    position: relative;
+}
+
+.replyAND p {
+    margin: 0 0 .2em 0;
+}
+
+.replyIconWrapperAND {
+    display: block;
+    width: 75px;
+    position: relative;
+    text-align: right;
+}
+
+.replyIconWrapperAND::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -.5em;
+    width: .5em;
+    height: 0;
+    border-top: 1em solid #FEFEFE;
+    border-right: 1em solid transparent;
+}
+
+/* TEXT */
+
+.textWrapperAND{
+    margin: 0;
+    padding: 0;
+}
+
+.textAND {
+    width: 200px;
+    background: #1993E6;
+    color: #FFFFFF;
+    padding: .7em;
+    border-radius: .2em;
+}
+
+.textAND p {
+    margin: 0 0 .2em 0;
+}
+
+.textIconWrapperAND {
+    display: block;
+    width: 75px;
+    position: relative;
+    text-align: left;
+}
+
+.textIconWrapperAND::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -.5em;
+    width: .5em;
+    height: 0;
+    border-top: 1em solid #1993E6;
+    border-left: 1em solid transparent;
+}

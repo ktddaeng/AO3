@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="tweets.css">
+</head>
+<body>
+    <p>Since a lot of fic writers like to involve social media in
+        their fics, why not do it with some style and flai than just
+        a few lines of text? Technically, you could make an actual
+        embedded Tweet, but it wouldn't be formatted the way we like
+        it, so let's try this with some work skins. The code on this
+        page provides several examples and options you can do with
+        tweets.</p>
+
+    <h2>Capturing a picture of a Tweet</h2>
+    <p align="center"><img class="twEasy" src="Yll9hGE.png" alt="Example of Image Tweet" width="760" height="288" /></p>
+    <p>The easiest method to "embed" tweets is to use a tweet
+        generator, save the pic, then upload them to any image
+        hosting site of your choice.</p>
+
+    <p>Your HTML should look like this:</p>
+    <pre><br />&lt;p align="center"&gt;&lt;img class="twEasy" src="http://imgur.com/Yll9hGE.png" alt="Example of Image Tweet" width="760" height="288" /&gt;&lt;/p&gt;</pre>
+
+    <p>The corresponding CSS should look like this:</p>
+    <pre><br />.twEasy{<br />    max-width: 300px;<br />    height: auto;<br />}</pre>
+
+    <p>The pros of this is that it's super duper easy to implement, but the cons is that you may not have crisp lines
+        that you'd get from formatting. You also can't highlight text. If you're not comfortable with spending a bunch
+    of time fiddling with HTML, then you can use this.</p>
+    <h2>Text-Only Tweets</h2>
+
+    <p>Now say you want to do this Tweet thing with higlightable text. So you want something like this.</p>
+    <div class="tw">
+        <p class="twBody">
+            <img class="twImage" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/French_Formal_Garden_in_Loire_Valley.jpg">
+            <span>
+            <img class="twAvatar" src="tzkpXGS.png">
+            <span class="twUser">
+                <span class="twUserName">Kayden Orona
+                <img class="twIcon" src="eVQzzhT.png">
+                </span>
+                <br>
+                <span class="twUserHandle">@kayorona</span>
+            </span>
+            <img class="twFollow" src="p6lbN22.png">
+            <br>
+        </span>
+            <span class="twText">
+            <a class="twLink">@jayorona</a> Wish you were here with us in
+            <a class="twLink">#France</a>. We miss you, Jaya.<span class="x1F49C"><span class="hide">(Purple Heart )</span></span>
+        </span>
+            <span class="twTimeStamp">
+            3:09 PM - 5 May 2014
+        </span>
+            <span>
+            <img class="twReplyIcon" src="9dwkilY.png">
+            <span class="twRetweet">
+                <img class="twRetweetIcon" src="ToOoCJz.png">
+                2,144
+            </span>
+            <span class ="twLike">
+                <img class="twHeartIcon" src="67stmhs.png">
+                2,901
+            </span>
+        </span>
+        </p>
+    </div>
+
+    <p>The full CSS code can be found in the following entry, but the HTML used for this is as follows:</p>
+    <pre><br/>&lt;div class="tw"&gt;<br />    &lt;p class="twBody"&gt;<br />    &lt;span&gt;<br />        &lt;img class="twAvatar" src="http://imgur.com/tzkpXGS.png"&gt;<br />        &lt;span class="twUser"&gt;<br />            &lt;span class="twUserName"&gt;Kayden Orona<br />            &lt;img class="twIcon" src="http://imgur.com/eVQzzhT.png"&gt;<br />            &lt;/span&gt;<br />            &lt;br&gt;<br />            &lt;span class="twUserHandle"&gt;@kayorona&lt;/span&gt;<br />        &lt;/span&gt;<br />        &lt;img class="twFollow" src="http://imgur.com/p6lbN22.png"&gt;<br />        &lt;br&gt;<br />    &lt;/span&gt;<br />        &lt;span class="twText"&gt;<br />        &lt;a class="twLink"&gt;@jayorona&lt;/a&gt; Wish you were here with us at<br />        &lt;a class="twLink"&gt;#France&lt;/a&gt;. We miss you.<br />    &lt;/span&gt;<br />        &lt;span class="twTimeStamp"&gt;<br />        3:09 PM - 5 May 2014<br />    &lt;/span&gt;<br />        &lt;span&gt;<br />        &lt;img class="twReplyIcon" src="http://imgur.com/9dwkilY.png"&gt;<br />        &lt;span class="twRetweet"&gt;<br />            &lt;img class="twRetweetIcon" src="http://imgur.com/ToOoCJz.png"&gt;<br />            2,144<br />        &lt;/span&gt;<br />        &lt;span class ="twLike"&gt;<br />            &lt;img class="twHeartIcon" src="http://imgur.com/67stmhs.png"&gt;<br />            2,901<br />        &lt;/span&gt;<br />    &lt;/span&gt;<br />    &lt;/p&gt;<br />&lt;/div&gt;</pre>
+
+    <p>As you can see, there are some icons required to load some of these things, most of I which I made
+        myself for you to use. Here's a list of the links.</p>
+
+    <ul>
+        <li><a href="http://imgur.com/p6lbN22">Twitter Icon</a></li>
+        <li><a href="http://imgur.com/67stmhs">Like Button</a></li>
+        <li><a href="http://imgur.com/9dwkilY">Reply Icon</a></li>
+        <li><a href="http://imgur.com/ToOoCJzs">Retweet Button</a></li>
+        <li><a href="http://imgur.com/eVQzzhT">Verified User Icon</a></li>
+
+    </ul>
+
+    <p>The avatar is just a sample one, so feel free to use your own. Be
+    sure to make the avatar square shaped, because the code won't truncate it
+    for you. All Twitter avatars get resized to 40px wide, so keep that in mind.</p>
+
+    <p>Essentially, you don't touch the tags, just edit the text as you see fit. If you need to make links, just
+    make links like you usually do in HTML. I've been unable to remove the decorative line underneath it, but using
+    spans breaks the HTML, and AO3 refuses to let me remove it. So... it's a little less authentic.</p>
+
+    <h2>Single Image Tweets</h2>
+    <p>Now, how about if you want to attach an image to your tweet? This isn't much different from your original
+        text-only tweet. You just need to make sure you tag the img tag with "twImage"</p>
+    <div class="tw">
+        <p class="twBody">
+            <img class="twImage" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/French_Formal_Garden_in_Loire_Valley.jpg">
+            <span>
+            <img class="twAvatar" src="tzkpXGS.png">
+            <span class="twUser">
+                <span class="twUserName">Kayden Orona
+                <img class="twIcon" src="eVQzzhT.png">
+                </span>
+                <br>
+                <span class="twUserHandle">@kayorona</span>
+            </span>
+            <img class="twFollow" src="p6lbN22.png">
+            <br>
+        </span>
+            <span class="twText">
+            <a class="twLink">@jayorona</a> Wish you were here with us in
+            <a class="twLink">#France</a>. We miss you, Jaya.<span class="x1F49C"><span class="hide">(Purple Heart )</span></span>
+        </span>
+            <span class="twTimeStamp">
+            3:09 PM - 5 May 2014
+        </span>
+            <span>
+            <img class="twReplyIcon" src="9dwkilY.png">
+            <span class="twRetweet">
+                <img class="twRetweetIcon" src="ToOoCJz.png">
+                2,144
+            </span>
+            <span class ="twLike">
+                <img class="twHeartIcon" src="67stmhs.png">
+                2,901
+            </span>
+        </span>
+        </p>
+    </div>
+    <p>
+        The maximum width of these simulated tweets are 300px wide, so
+        if you don't want your picture to be blown up, try to stay above
+        that width. Don't worry about making your pictures too big, because
+        tagging it as "twImage" should fit the image in the div container.
+    </p>
+    <p>HTML:</p>
+    <pre>&lt;div class="tw"&gt;<br />    &lt;p class="twBody"&gt;<br />        &lt;img class="twImage" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/French_Formal_Garden_in_Loire_Valley.jpg"&gt;<br />        &lt;span&gt;<br />        &lt;img class="twAvatar" src="http://imgur.com/tzkpXGS.png"&gt;<br />        &lt;span class="twUser"&gt;<br />            &lt;span class="twUserName"&gt;Kayden Orona<br />            &lt;img class="twIcon" src="http://imgur.com/eVQzzhT.png"&gt;<br />            &lt;/span&gt;<br />            &lt;br&gt;<br />            &lt;span class="twUserHandle"&gt;@kayorona&lt;/span&gt;<br />        &lt;/span&gt;<br />        &lt;img class="twFollow" src="http://imgur.com/p6lbN22.png"&gt;<br />        &lt;br&gt;<br />    &lt;/span&gt;<br />        &lt;span class="twText"&gt;<br />        &lt;a class="twLink"&gt;@jayorona&lt;/a&gt; Wish you were here with us at<br />        &lt;a class="twLink"&gt;#France&lt;/a&gt;. We miss you.<br />    &lt;/span&gt;<br />        &lt;span class="twTimeStamp"&gt;<br />        3:09 PM - 5 May 2014<br />    &lt;/span&gt;<br />        &lt;span&gt;<br />        &lt;img class="twReplyIcon" src="http://imgur.com/9dwkilY.png"&gt;<br />        &lt;span class="twRetweet"&gt;<br />            &lt;img class="twRetweetIcon" src="http://imgur.com/ToOoCJz.png"&gt;<br />            2,144<br />        &lt;/span&gt;<br />        &lt;span class ="twLike"&gt;<br />            &lt;img class="twHeartIcon" src="http://imgur.com/67stmhs.png"&gt;<br />            2,901<br />        &lt;/span&gt;<br />    &lt;/span&gt;<br />    &lt;/p&gt;<br />&lt;/div&gt;</pre>
+    <p>Anyways, this is all for today. Once again, CSS is attached on the next chapter for you to look at for yourself.
+    I could have went the full mile and add hover effects (changing colors), but I think that would detract from
+    the fact that I just made this to make fictional tweets look nice on this site.</p>
+
+    <h2>Emoji Implementation</h2>
+    <p>It's not a Tweet unless you can add emojis!<span class="x1F604"><span class="hide">(Smiling Face With Open Mouth And Smiling Eyes )</span></span></p>
+    <p>Thankfully, someone's already done work for that! For full
+        documentation, see <a href="http://archiveofourown.org/works/6580324/chapters/15055576">All the Emoji
+        by CodenameCarrot</a>. It's really easy to implement, and is
+        non-intrusive to the tweet structure. Another advantage to formatted Tweets instead of images is that they're easy to change.
+        All you gotta do is go the editing chapter and fix a few things. Or you could just copy and paste
+        from your IDE like I do. Either way, less steps! <span class="x1F609"><span class="hide">(Winking Face )</span></span></p>
+</body>
+</html>

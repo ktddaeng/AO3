@@ -1,0 +1,114 @@
+.x1F49C:before {
+    content: "\1F49C";
+}
+
+.x1F604:before {
+    content: "\1F604";
+}
+
+.x1F609:before {
+    content: "\1F609";
+}
+
+.hide {
+    display: none;
+}
+
+.twEasy{
+    max-width: 300px;
+    height: auto;
+}
+
+.inst {
+    max-width: 300px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: table;
+    margin: auto;
+}
+
+.instBody {
+    overflow: hidden;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #dddddd;
+    border-radius: .3em;
+    float: left;
+    min-width: 100%;
+    position:relative;
+    padding: .7em;
+    margin-left: -1em;
+}
+
+/* Images */
+.instImage{
+    width: 111%;
+    height: auto;
+    margin: 0em -1em 0em -1em;
+}
+
+.instAvatar {
+    width: 30px;
+    height: auto;
+    float: left;
+    margin: 0em 0.3em .5em -.1em;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #dddddd;
+    border-radius: 50%;
+}
+
+.instIcon {
+    height: 20px;
+    width: auto;
+    margin: 0.3em 0.3em 0.1em 0em;
+}
+
+.instIconRight {
+    height: 20px;
+    width: auto;
+    float: right;
+    margin: 0.3em 0.3em 0.1em 0em;
+}
+
+.instHeart {
+    height: 10px;
+    width: auto;
+}
+
+/*Text*/
+
+.instUser {
+    color: #343436;
+    position: relative;
+    top: .1em;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.instText {
+    border-top:1px solid #ADADAD;
+    margin: .1em 0em .1em 0em;
+    padding: .1em 0em .1em 0em;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.instLink {
+    color: #135588;
+}
+
+.instComments {
+    display: inline-block;
+    width: 100%;
+    color: #ADADAD;
+    font-size: 14px;
+}
+
+.instTimestamp {
+    display: inline-block;
+    width: 100%;
+    color: #ADADAD;
+    text-transform: uppercase;
+    font-size: 12px;
+}

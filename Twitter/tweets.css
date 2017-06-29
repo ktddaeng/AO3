@@ -1,0 +1,138 @@
+/*Emoji Implementation*/
+.x1F49C:before {
+    content: "\1F49C";
+}
+
+.x1F604:before {
+    content: "\1F604";
+}
+
+.x1F609:before {
+    content: "\1F609";
+}
+
+.hide {
+    display: none;
+}
+
+/*If you still want to use image formatted tweets. Don't feel bad.*/
+.twEasy{
+    max-width: 300px;
+    height: auto;
+}
+
+/*The Fun Stuff*/
+.tw {
+    max-width: 300px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: table;
+    margin: auto;
+}
+
+.twBody {
+    overflow: hidden;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #dddddd;
+    border-radius: .3em;
+    float: left;
+    min-width: 100%;
+    position:relative;
+    padding: 1em;
+    margin-left: -1em;
+}
+
+/* Images */
+.twImage{
+    width: 111%;
+    height: auto;
+    margin: -1em 0em 1em -1em;
+}
+
+.twAvatar {
+    width: 40px;
+    height: auto;
+    float: left;
+    margin: 0em 0.3em .3em 0em;
+    border-radius: 5px;
+}
+
+.twIcon {
+    width: 17px;
+    height: auto;
+}
+
+.twFollow {
+    position:relative;
+    top: -1.7em;
+    width: 17px;
+    height: auto;
+    display: inline-block;
+    float: right;
+    color: #5EA9DD;
+}
+
+.twReplyIcon {
+    width: 17px;
+    height: auto;
+}
+
+.twRetweetIcon {
+    width: 22px;
+    height: auto;
+    margin-right: .1em;
+}
+
+.twHeartIcon {
+    width: 13px;
+    height: auto;
+    margin-right: .1em;
+}
+
+/* Text */
+
+.twUserName {
+    position: relative;
+    top: -.2em;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.twUserHandle {
+    position: relative;
+    top: -.5em;
+    font-size: 16px;
+    font-weight: 300;
+    color: #697882;
+}
+
+.twText {
+    display: inline-block;
+}
+
+.twTimeStamp {
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 300;
+    color: #697882;
+    padding: .5em 0em .5em 0em;
+}
+
+.twRetweet {
+    font-size: 14px;
+    color: #697882;
+    margin: 1em 1em 1em 1em;
+}
+
+.twLike {
+    font-size: 14px;
+    color: #697882;
+
+}
+
+.twLink{
+    text-decoration: none;
+    color: #2C7BB8;
+}

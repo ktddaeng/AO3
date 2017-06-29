@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="fe.css">
+</head>
+<body>
+    <p>I made this skin because I needed to make scripting easier,
+    since I didn't want to format every single cell individually.</p>
+
+    <p>Firstly, the script is made through a table, so it's a little
+    extra work to put together. But, you can easily put a table through
+    word processor of your choice. In this case, I used Word. We start
+    with a simple script like this:</p>
+    <pre>
+Niles: This is the first time I've seen you wear boots.
+Anri: They're uncomfortable, but if it's for the sake of keeping my cover, I'll wear them.
+Niles: Hmm, ever wore heels before?
+Anri: I have. They aren't the most pleasant of memories.
+Niles: A shame, then.
+    </pre>
+    <p>I use Word's feature of converting text into a table, splitting the cells
+    by the colon, then with a bit of tweaking (ie adding images and removing extra characters),
+    we get a table like this:</p>
+<pre>&lt;table&gt;<br />    &lt;tbody&gt;<br />    &lt;tr&gt;<br />        &lt;td&gt;&lt;img src="http://imgur.com/STYEtz8.png" alt="Niles" width="128" height="128" /&gt;&lt;/td&gt;<br />        &lt;td&gt;This is the first time I've seen you wear boots.&lt;/td&gt;<br />    &lt;/tr&gt;<br />    &lt;tr&gt;<br />        &lt;td&gt;&lt;img src="http://imgur.com/ZJOMCNG.png" alt="Anri" width="128" height="128" /&gt;&lt;/td&gt;<br />        &lt;td&gt;They're uncomfortable, but if it's for the sake of keeping my cover, I'll wear them.&lt;/td&gt;<br />    &lt;/tr&gt;<br />    &lt;tr&gt;<br />        &lt;td&gt;&lt;img src="http://imgur.com/STYEtz8.png" alt="Niles" width="128" height="128" /&gt;&lt;/td&gt;<br />        &lt;td&gt;Hmm, ever wore heels before?&lt;/td&gt;<br />    &lt;/tr&gt;<br />    &lt;tr&gt;<br />        &lt;td&gt;&lt;img src="http://imgur.com/bQQi2yY.png" alt="Anri" width="128" height="128" /&gt;&lt;/td&gt;<br />        &lt;td&gt;I have. They aren't the most pleasant of memories.&lt;/td&gt;<br />    &lt;/tr&gt;<br />    &lt;tr&gt;<br />        &lt;td&gt;&lt;img src="http://imgur.com/tmoSITI.png" alt="Niles" width="128" height="128" /&gt;&lt;/td&gt;<br />        &lt;td&gt;A shame, then.&lt;/td&gt;<br />    &lt;/tr&gt;<br />    &lt;/tbody&gt;<br />&lt;/table&gt;</pre>
+    <p>We then put together the CSS to make the table pretty. This means fitting the first column
+    to huge the sides of the sprite image and centering text to align center vertically.</p>
+    <pre>
+td {
+    vertical-align: middle;
+}
+
+td:nth-child(1) {
+    width: 128px;
+}
+    </pre>
+
+    <p>So, the end result is this:</p>
+    <table>
+        <tbody>
+        <tr>
+            <td><img src="Zero02.png" alt="Niles" width="128" height="128" /></td>
+            <td>This is the first time I've seen you wear boots.</td>
+        </tr>
+        <tr>
+            <td><img src="Anri_Hood06-min.png" alt="Anri" width="128" height="128" /></td>
+            <td>They're uncomfortable, but if it's for the sake of keeping my cover, I'll wear them.</td>
+        </tr>
+        <tr>
+            <td><img src="Zero02.png" alt="Niles" width="128" height="128" /></td>
+            <td>Hmm, ever wore heels before?</td>
+        </tr>
+        <tr>
+            <td><img src="Anri_Hood07-min.png" alt="Anri" width="128" height="128" /></td>
+            <td>I have. They aren't the most pleasant of memories.</td>
+        </tr>
+        <tr>
+            <td><img src="Zero01.png" alt="Niles" width="128" height="128" /></td>
+            <td>A shame, then.</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>An additional feature of the code is to format stage directions, which can look a little
+    different from normal speaking text.</p>
+    <pre>
+.stagedir {
+  text-align: center;
+  font-style: italic;
+}
+    </pre>
+    <p>Say we have a script that looks like this.</p>
+<pre>&lt;tbody&gt;<br />&lt;table&gt;<br />&lt;td&gt;&lt;img src="http://imgur.com/NeJLquH.png" alt="Takumi" width="128" height="128" /&gt;&lt;/td&gt;<br />&lt;td&gt;I've waited. For a long time, perhaps much like you. I've waited for things to turn back to normal again, but that time never came.&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />    &lt;td&gt;&lt;img src="http://imgur.com/fftPEV3.png" alt="Elise" width="128" height="128" /&gt;&lt;/td&gt;<br />    &lt;td&gt;I don't know what you're wishing for, but I'm sure you will get what you want someday.&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />    &lt;td&gt;&lt;img src="http://imgur.com/qqSzY4X.png" alt="Takumi" width="128" height="128" /&gt;&lt;/td&gt;<br />    &lt;td&gt;&hellip; F-Forget all the nonsense I just&nbsp;said.&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />    &lt;td&gt;&nbsp;&lt;/td&gt;<br />    &lt;td class="stagedir"&gt;(Takumi quickly leaves, and shuts the door behind him.)&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />    &lt;td&gt;&lt;img src="http://imgur.com/FylhaCy.png" alt="Elise" width="128" height="128" /&gt;&lt;/td&gt;<br />    &lt;td&gt;&hellip; Why should I...?&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/tbody&gt;<br />&lt;/table&gt;</pre>
+    <p>Note there is a row tagged with the class "stagedir". With the added CSS script, the
+        script with stage directions will look like this:</p>
+    <tbody>
+    <table>
+    <td><img src="Takumi01.png" alt="Takumi" width="128" height="128" /></td>
+    <td>I've waited. For a long time, perhaps much like you. I've waited for things to turn back to normal again, but that time never came.</td>
+    </tr>
+    <tr>
+        <td><img src="Elise01.png" alt="Elise" width="128" height="128" /></td>
+        <td>I don't know what you're wishing for, but I'm sure you will get what you want someday.</td>
+    </tr>
+    <tr>
+        <td><img src="Takumi02.png" alt="Takumi" width="128" height="128" /></td>
+        <td>… F-Forget all the nonsense I just said.</td>
+    </tr>
+    <tr>
+        <td> </td>
+        <td class="stagedir">(Takumi quickly leaves, and shuts the door behind him.)</td>
+    </tr>
+    <tr>
+        <td><img src="Elise02.png" alt="Elise" width="128" height="128" /></td>
+        <td>… Why should I...?</td>
+    </tr>
+    </tbody>
+    </table>
+    <p>And that's all, really. I hope this will be useful for anyone who considers writing fics
+    in the same format.</p>
+</body>
+</html>

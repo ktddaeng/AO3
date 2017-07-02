@@ -1,3 +1,31 @@
+/*Formatting to make independent page looks nice*/
+body {
+    font-family: "Open Sans Light", "Lato Light", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+p, h1, h2, pre, td, tr {
+    padding: 0 10px;
+    font-size: 1.0em;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;      /*Internet Explorer*/
+}
+
+#hh {
+    color: #fff;
+    width: 100vw;
+    padding: 15px 0;
+    margin: 0 0 1em 0;
+    width: 100%;
+    background: linear-gradient(to left top, dodgerblue, darkturquoise);
+}
+/*Actual code to copy and paste*/
 td {
     vertical-align: middle;
 }

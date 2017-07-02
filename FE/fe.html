@@ -6,9 +6,13 @@
     <link rel="stylesheet" type="text/css" href="fe.css">
 </head>
 <body>
+    <div id="hh">
+        <h1 align="center">FE Scripting Made Easier!</h1>
+    </div>
     <p>I made this skin because I needed to make scripting easier,
     since I didn't want to format every single cell individually.</p>
 
+    <h2>Basic Usage</h2>
     <p>Firstly, the script is made through a table, so it's a little
     extra work to put together. But, you can easily put a table through
     word processor of your choice. In this case, I used Word. We start
@@ -69,6 +73,7 @@ td:nth-child(1) {
   font-style: italic;
 }
     </pre>
+    <h2>Stage Directions</h2>
     <p>Say we have a script that looks like this.</p>
 <pre>&lt;tbody&gt;<br />&lt;table&gt;<br />&lt;td&gt;&lt;img src="http://imgur.com/NeJLquH.png" alt="Takumi" width="128" height="128" /&gt;&lt;/td&gt;<br />&lt;td&gt;I've waited. For a long time, perhaps much like you. I've waited for things to turn back to normal again, but that time never came.&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />    &lt;td&gt;&lt;img src="http://imgur.com/fftPEV3.png" alt="Elise" width="128" height="128" /&gt;&lt;/td&gt;<br />    &lt;td&gt;I don't know what you're wishing for, but I'm sure you will get what you want someday.&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />    &lt;td&gt;&lt;img src="http://imgur.com/qqSzY4X.png" alt="Takumi" width="128" height="128" /&gt;&lt;/td&gt;<br />    &lt;td&gt;&hellip; F-Forget all the nonsense I just&nbsp;said.&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />    &lt;td&gt;&nbsp;&lt;/td&gt;<br />    &lt;td class="stagedir"&gt;(Takumi quickly leaves, and shuts the door behind him.)&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />    &lt;td&gt;&lt;img src="http://imgur.com/FylhaCy.png" alt="Elise" width="128" height="128" /&gt;&lt;/td&gt;<br />    &lt;td&gt;&hellip; Why should I...?&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/tbody&gt;<br />&lt;/table&gt;</pre>
     <p>Note there is a row tagged with the class "stagedir". With the added CSS script, the
@@ -97,6 +102,6 @@ td:nth-child(1) {
     </tbody>
     </table>
     <p>And that's all, really. I hope this will be useful for anyone who considers writing fics
-    in the same format.</p>
+    in the same format. The Github repository for this page is located <a href="https://github.com/prim0rdia1/AO3_FE">here</a>.</p>
 </body>
 </html>

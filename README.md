@@ -3,4 +3,4 @@ THis is CSS code and HTML implementation for mock-ups of social media posts and 
 
 Please note that these work skins were made primarily for the AO3 website exclusively. Word kerneling and margins may be shifted in the raw documentation compared to the actual results on the official site.
 
-[Demonstration Page](https://prim0rdia1.github.io/AO3/)
+[Demonstration Page](https://ktddaeng.github.io/AO3/)

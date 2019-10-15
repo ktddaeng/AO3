@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation Tweet 2019</title>
+    <link rel="stylesheet" type="text/css" href="tweets2019.css">
+</head>
+<body>
+    <p>Sup, back at it again, but this time with a more updated version of embedded highlightable "Tweets" for your fics.
+    In addition to adapting to Twitter's new look as of 2019, I've added some more features such as quote retweeting.
+    In case you've never read my stuff before, please refer to the <a href="https://archiveofourown.org/works/8631214/chapters/20890940">previous chapters on the original Twitter mockup.</a></p>
+
+    <h2>Twitter (2019) Simple Embedded Tweet</h2>
+
+    <p>Much of new look hasn't exactly changed, except for the lower half. Thankfully the new Twitter has less fancy icons,
+      but the added complexity of things like quote retweets basically broke AO3's ability to handle the number of nested
+      span elements and images, so I took the janky approach and used emoticons and fancy CSS. This means that mobile and desktop view will vary wildly.
+      Also ran into some issues managing the different span containers so I wasn't able to quite get that border line between the reply count
+      and the rest of the Tweet to reach the edges. Oh, well, still looks pretty legit, right?</p>
+
+    <div class="tw19">
+        <p class="tw19Body">
+          <span class="tw19User">
+              <img class="tw19Avatar" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg">
+              <span>
+                  <span class="tw19UserName">Kayden Orona
+                  <span class="tw19Verified">✔</span>
+                  </span>
+                  <br>
+                  <span class="tw19UserHandle">@kayorona</span>
+              </span>
+              <img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png">
+              <br>
+          </span>
+          <span class="tw19Text">
+              <span class="tw19Link">@jayorona</span> Wish you were here with us at
+              <span class="tw19Link">#France</span>. We miss you.
+          </span>
+          <span class="tw19LikesAndTime">
+              <span>❤ 123</span>
+              <span class="tw19TimeStamp">3:09 PM - 5 May 2014 </span>
+          </span>
+          <span class="tw19ReplyCount">
+              192 people are talking about this
+          </span>
+        </p>
+    </div>
+
+    <p>Much like the Instagram mockup, I have bolded the portions where you should change to personalize the HTML code</p>
+
+    <pre>&lt;div class="tw19"&gt;<br /> &lt;p class="tw19Body"&gt;<br /> &lt;span class="tw19User"&gt;<br /><strong>&lt;!-- Account Avatar/Image/Icon/PFP --&gt;</strong><br /><strong>&lt;img class="tw19Avatar" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg"&gt;</strong><br /> &lt;span&gt;<br /><strong> &lt;span class="tw19UserName"&gt;Kayden Orona&nbsp;&lt;!-- Account Name --&gt;</strong><br /><strong> &lt;span class="tw19Verified"&gt;✔&lt;/span&gt;&nbsp;&lt;!-- Verified Icon (optional) --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;br&gt;<br /><strong> &lt;span class="tw19UserHandle"&gt;@kayorona&lt;/span&gt;&nbsp;&lt;!-- Account Handle/Username --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png"&gt;<br /> &lt;br&gt;<br /> &lt;/span&gt;<br /> &lt;span class="tw19Text"&gt;<br /><strong>&lt;!-- Enter Text Here, use class="tw19Link" for links/mentions/etc. --&gt;</strong><br /><strong> &lt;span class="tw19Link"&gt;@jayorona&lt;/span&gt; Wish you were here with us at</strong><br /><strong> &lt;span class="tw19Link"&gt;#France&lt;/span&gt;. We miss you.</strong><br /> &lt;/span&gt;<br /> &lt;span class="tw19LikesAndTime"&gt;<br /> &lt;span&gt;❤ <strong>123</strong>&lt;/span&gt;&nbsp;<strong>&lt;!-- Likes Count --&gt;</strong><br /><strong> &lt;span class="tw19TimeStamp"&gt;3:09 PM - 5 May 2014 &lt;/span&gt;&nbsp;&lt;!-- Timestamp --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;span class="tw19ReplyCount"&gt;<br /><strong> 192 people are talking about this&nbsp;&lt;!-- Reply Count --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;/div&gt;</pre>
+
+    <p>Pictures have also been moved to the bottom of the tweet and are framed by the Tweet (unless it's Quoted). Not much on the user end to change.</p>
+
+    <div class="tw19">
+        <p class="tw19Body">
+          <span class="tw19User">
+                <img class="tw19Avatar" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg">
+                <span>
+                    <span class="tw19UserName">Kayden Orona
+                    <span class="tw19Verified">✔</span>
+                    </span>
+                    <br>
+                    <span class="tw19UserHandle">@kayorona</span>
+                </span>
+                <img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png">
+                <br>
+            </span>
+            <span class="tw19Text">
+                <span class="tw19Link">@jayorona</span> Wish you were here with us at
+                <span class="tw19Link">#France</span>. We miss you.
+            </span>
+            <img class="tw19Image" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/French_Formal_Garden_in_Loire_Valley.jpg">
+
+            <span class="tw19LikesAndTime">
+                <span>❤ 123</span>
+                <span class="tw19TimeStamp">3:09 PM - 5 May 2014 </span>
+            </span>
+            <span class="tw19ReplyCount">
+                192 people are talking about this
+            </span>
+        </p>
+    </div>
+
+    <pre>&lt;div class="tw19"&gt;<br /> &lt;p class="tw19Body"&gt;<br /> &lt;span class="tw19User"&gt;<br /><strong>&lt;!-- Account Avatar/Image/Icon/PFP --&gt;</strong><br /> <strong>&lt;img class="tw19Avatar" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg"&gt;</strong><br /> &lt;span&gt;<br /> <strong>&lt;span class="tw19UserName"&gt;Kayden Orona &lt;!-- Account Name --&gt;</strong><br /><strong> &lt;span class="tw19Verified"&gt;✔&lt;/span&gt;&nbsp;&lt;!-- Verified Icon (optional) --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;br&gt;<br /> <strong>&lt;span class="tw19UserHandle"&gt;@kayorona&lt;/span&gt;&nbsp;&lt;!-- Account Handle/Username --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png"&gt;<br /> &lt;br&gt;<br /> &lt;/span&gt;<br /> &lt;span class="tw19Text"&gt;<br /> <strong>&lt;!-- Enter Text Here, use class="tw19Link" for links/mentions/etc. --&gt;</strong><br /><strong>&lt;span class="tw19Link"&gt;@jayorona&lt;/span&gt; Wish you were here with us at</strong><br /><strong> &lt;span class="tw19Link"&gt;#France&lt;/span&gt;. We miss you.</strong><br /> &lt;/span&gt;<br /> <strong>&lt;!-- Image is posted here --&gt;</strong><br /><strong>&lt;img class="tw19Image" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/French_Formal_Garden_in_Loire_Valley.jpg"&gt;<br /></strong>&lt;span class="tw19LikesAndTime"&gt;<br /> &lt;span&gt;❤ <strong>123</strong>&lt;/span&gt;&nbsp;<strong>&lt;!-- Likes Count --&gt;</strong><br /> <strong>&lt;span class="tw19TimeStamp"&gt;3:09 PM - 5 May 2014 &lt;/span&gt; &lt;!-- Timestamp --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;span class="tw19ReplyCount"&gt;<br /> <strong>192 people are talking about this&nbsp;&lt;!-- Reply Count --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;/div&gt;</pre>
+
+    <h2>Quote Retweet</h2>
+
+    <p>So now for something different: Tweets within a Tweet. The format of the quoted Tweet is not that different from the normal Tweet, only now there are a few new classes.
+    On the user's end, you only need change the avatar's image, the username, the handle, the content/picture. Below are two demonstrations of a Quote Retweet with and without a picture.</p>
+
+    <div class="tw19">
+        <p class="tw19Body">
+          <span class="tw19User">
+              <img class="tw19Avatar" src="https://farm5.staticflickr.com/4857/46881290631_d4c6d2bbac_m.jpg">
+              <span>
+                  <span class="tw19UserName">Jaya Orona
+                  <span class="tw19Verified">✔</span>
+                  </span>
+                  <br>
+                  <span class="tw19UserHandle">@jayorona</span>
+              </span>
+              <img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png">
+              <br>
+          </span>
+          <span class="tw19Text">
+              Awww I miss you too!!
+          </span>
+
+          <span class="tw19BodyEmbed">
+            <span class="tw19User">
+                <img class="tw19AvatarEmbed" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg">
+                <span class="tw19UserNameEmbed">Kayden Orona</span>
+                <span class="tw19VerifiedEmbed">✔</span>
+                <span class="tw19UserHandleEmbed">@kayorona</span>
+            </span>
+            <span class="tw19Text">
+                <span class="tw19Link">@jayorona</span> Wish you were here with us at
+                <span class="tw19Link">#France</span>. We miss you.
+            </span>
+          </span>
+
+          <span class="tw19LikesAndTime">
+              <span>❤ 123</span>
+              <span class="tw19TimeStamp">3:09 PM - 5 May 2014 </span>
+          </span>
+          <span class="tw19ReplyCount">
+              192 people are talking about this
+          </span>
+        </p>
+    </div>
+
+    <pre><p>&lt;div class="tw19"&gt;<br /> &lt;p class="tw19Body"&gt;<br /> &lt;span class="tw19User"&gt;<br /><strong>&lt;!-- Account Avatar/Image/Icon/PFP --&gt;</strong><br /><strong> &lt;img class="tw19Avatar" src="https://farm5.staticflickr.com/4857/46881290631_d4c6d2bbac_m.jpg"&gt;</strong><br /> &lt;span&gt;<br /><strong> &lt;span class="tw19UserName"&gt;Jaya Orona&nbsp;&lt;!-- Account Name --&gt;</strong><br /><strong> &lt;span class="tw19Verified"&gt;✔&lt;/span&gt;&nbsp;&lt;!-- Verified Icon (optional) --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;br&gt;<br /><strong> &lt;span class="tw19UserHandle"&gt;@jayorona&lt;/span&gt;&nbsp;&lt;!-- Account Handle/Username --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png"&gt;<br /> &lt;br&gt;<br /> &lt;/span&gt;<br /> &lt;span class="tw19Text"&gt;<br /><strong>&lt;!-- Enter Text Here, use class="tw19Link" for links/mentions/etc. --&gt;</strong><br /><strong> Awww I miss you too!!</strong><br /> &lt;/span&gt;</p>
+<p>&lt;span class="tw19BodyEmbed"&gt;<br /> &lt;span class="tw19User"&gt;<br /><strong>&lt;!-- Embedded Avatar/Image/Icon/PFP --&gt;</strong><br /><strong> &lt;img class="tw19AvatarEmbed" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg"&gt;</strong><br /><strong> &lt;span class="tw19UserNameEmbed"&gt;Kayden Orona&lt;/span&gt;&nbsp;&lt;!-- Embedded name --&gt;</strong><br /><strong> &lt;span class="tw19VerifiedEmbed"&gt;✔&lt;/span&gt; &lt;!-- Embedded Verified Icon (optional) --&gt;</strong><br /><strong> &lt;span class="tw19UserHandleEmbed"&gt;@kayorona&lt;/span&gt;&nbsp;&lt;!-- Embedded Handle --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;span class="tw19Text"&gt;<br /><strong>&lt;!-- Enter Embedded Text Here --&gt;</strong><br /><strong> &lt;span class="tw19Link"&gt;@jayorona&lt;/span&gt; Wish you were here with us at</strong><br /><strong> &lt;span class="tw19Link"&gt;#France&lt;/span&gt;. We miss you.</strong><br /> &lt;/span&gt;<br /> &lt;/span&gt;</p>
+<p>&lt;span class="tw19LikesAndTime"&gt;<br /> &lt;span&gt;❤ <strong>123</strong>&lt;/span&gt;&nbsp;<strong>&lt;!-- Likes Count --&gt;</strong><br /><strong> &lt;span class="tw19TimeStamp"&gt;3:09 PM - 5 May 2014 &lt;/span&gt;&nbsp;&lt;!-- Timestamp --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;span class="tw19ReplyCount"&gt;<br /><strong> 192 people are talking about this&nbsp;&lt;!-- Reply Count --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;/div&gt;</p></pre>
+
+    <p>The same applies for tweets that have photos. It works similarly to how the normal one does.</p>
+
+    <div class="tw19">
+        <p class="tw19Body">
+          <span class="tw19User">
+              <img class="tw19Avatar" src="https://farm5.staticflickr.com/4857/46881290631_d4c6d2bbac_m.jpg">
+              <span>
+                  <span class="tw19UserName">Jaya Orona
+                  <span class="tw19Verified">✔</span>
+                  </span>
+                  <br>
+                  <span class="tw19UserHandle">@jayorona</span>
+              </span>
+              <img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png">
+              <br>
+          </span>
+          <span class="tw19Text">
+              Awww I miss you too!! Thanks for the pics!
+          </span>
+
+          <span class="tw19BodyEmbed">
+            <span class="tw19User">
+                  <img class="tw19AvatarEmbed" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg">
+                  <span class="tw19UserNameEmbed">Kayden Orona
+                  </span>
+                  <span class="tw19VerifiedEmbed">✔</span>
+                  <span class="tw19UserHandleEmbed">@kayorona</span>
+              </span>
+              <span class="tw19Text">
+                  <span class="tw19Link">@jayorona</span> Wish you were here with us at
+                  <span class="tw19Link">#France</span>. We miss you.
+              </span>
+              <img class="tw19ImageEmbed" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/French_Formal_Garden_in_Loire_Valley.jpg">
+          </span>
+
+          <span class="tw19LikesAndTime">
+              <span>❤ 123</span>
+              <span class="tw19TimeStamp">3:09 PM - 5 May 2014 </span>
+          </span>
+          <span class="tw19ReplyCount">
+              192 people are talking about this
+          </span>
+        </p>
+    </div>
+
+    <pre><p>&lt;div class="tw19"&gt;<br /> &lt;p class="tw19Body"&gt;<br /> &lt;span class="tw19User"&gt;<br /><strong>&lt;!-- Account Avatar/Image/Icon/PFP --&gt;</strong><br /><strong> &lt;img class="tw19Avatar" src="https://farm5.staticflickr.com/4857/46881290631_d4c6d2bbac_m.jpg"&gt;</strong><br /> &lt;span&gt;<br /><strong> &lt;span class="tw19UserName"&gt;Jaya Orona&nbsp;&lt;!-- Account Name --&gt;</strong><br /><strong> &lt;span class="tw19Verified"&gt;✔&lt;/span&gt;&nbsp;&lt;!-- Verified Icon (optional) --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;br&gt;<br /><strong> &lt;span class="tw19UserHandle"&gt;@jayorona&lt;/span&gt;&nbsp;&lt;!-- Account Handle/Username --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png"&gt;<br /> &lt;br&gt;<br /> &lt;/span&gt;<br /> &lt;span class="tw19Text"&gt;<br /><strong>&lt;!-- Enter Text Here, use class="tw19Link" for links/mentions/etc. --&gt;</strong><br /><strong> Awww I miss you too!! Thanks for the pics!</strong><br /> &lt;/span&gt;</p>
+<p>&lt;span class="tw19BodyEmbed"&gt;<br /> &lt;span class="tw19User"&gt;<br /><strong>&lt;!-- Embedded Avatar/Image/Icon/PFP --&gt;</strong><br /><strong> &lt;img class="tw19AvatarEmbed" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg"&gt;</strong><br /><strong> &lt;span class="tw19UserNameEmbed"&gt;Kayden Orona&nbsp;&lt;!-- Embedded name --&gt;</strong><br /> &lt;/span&gt;<br /><strong> &lt;span class="tw19VerifiedEmbed"&gt;✔&lt;/span&gt;&nbsp;&lt;!-- Embedded Verified Icon (optional) --&gt;</strong><br /><strong> &lt;span class="tw19UserHandleEmbed"&gt;@kayorona&lt;/span&gt;&nbsp;&lt;!-- Embedded Handle --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;span class="tw19Text"&gt;<br /><strong>&lt;!-- Enter Embedded Text Here --&gt;</strong><br /><strong>&lt;span class="tw19Link"&gt;@jayorona&lt;/span&gt; Wish you were here with us at</strong><br /><strong> &lt;span class="tw19Link"&gt;#France&lt;/span&gt;. We miss you.</strong><br /> &lt;/span&gt;<br /><strong>&lt;!-- Enter Embedded Image Here --&gt;</strong><br /><strong> &lt;img class="tw19ImageEmbed" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/French_Formal_Garden_in_Loire_Valley.jpg"&gt;</strong><br /> &lt;/span&gt;</p>
+<p>&lt;span class="tw19LikesAndTime"&gt;<br /> &lt;span&gt;❤ <strong>123</strong>&lt;/span&gt;&nbsp;<strong>&lt;!-- Likes Count --&gt;</strong><br /><strong> &lt;span class="tw19TimeStamp"&gt;3:09 PM - 5 May 2014 &lt;/span&gt;&nbsp;&lt;!-- Timestamp --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;span class="tw19ReplyCount"&gt;<br /><strong> 192 people are talking about this &lt;!-- Reply Count --&gt;</strong><br /> &lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;/div&gt;</p></pre>
+
+    <p>Now you can spruce up your fic in a more updated style. Maybe when I have more time it would be cool to try Tweet threads. I hope this will prove useful for those of you who want to make Tweets in your fics. And now I'll go back into my den to hibernate for the winter.</p>
+</body>
+</html>

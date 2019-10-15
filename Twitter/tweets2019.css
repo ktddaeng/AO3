@@ -1,0 +1,205 @@
+/*Emoji Implementation*/
+.x1F49C:before {
+    content: "\1F49C";
+}
+
+.x1F604:before {
+    content: "\1F604";
+}
+
+.x1F609:before {
+    content: "\1F609";
+}
+
+.x1F5E9:before {
+    content: "\1F5E9";
+}
+.x1F427:before {
+    content: "\1F427";
+}
+
+.hide {
+    display: none;
+}
+
+/*The Fun Stuff*/
+
+/*The general Tweet container. Sets fonts and other fancy formatting.*/
+.tw19 {
+    max-width: 300px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: table;
+    margin: auto;
+}
+
+/*The body of the Tweet. Formatting for borders, rounded edges, padding.*/
+.tw19Body {
+    overflow: hidden;
+    background-color: #ffffff;
+    border: .05em solid #dddddd;
+    border-radius: .3em;
+    float: left;
+    min-width: 100%;
+    position:relative;
+    padding: 1em;
+    margin-left: -1em;
+}
+
+/*Body formatting for embedded tweets, mostly changes in width/padding*/
+.tw19BodyEmbed {
+    overflow: hidden;
+    display: inline;
+    border: .05em solid #dddddd;
+    border-radius: .3em;
+    float: left;
+    min-width: 90%;
+    position:relative;
+    padding: 1em 1em 0em 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Images */
+/*Formatting for the Tweet's main image, gives rounded edges*/
+.tw19Image{
+    width: 100%;
+    height: auto;
+    border-radius: 0.3em;
+    margin: 0em 0em 0em 0em;
+}
+
+/*Formatting for embedded images.*/
+.tw19ImageEmbed{
+    width: 115%;
+    height: auto;
+    margin: 0em 0em -1em -1em;
+}
+
+/*Avatars are automatically formatted to be circles*/
+.tw19Avatar {
+    width: 40px;
+    height: auto;
+    float: left;
+    margin: 0em 0.3em .3em 0em;
+    border-radius: 20px;
+}
+
+/*Embedded avatars are small and fit the height of username text*/
+.tw19AvatarEmbed {
+    width: 20px;
+    height: auto;
+    float: left;
+    margin: 0em 0.3em .3em 0em;
+    border-radius: 20px;
+}
+
+/*Formatting for the Verified Icons*/
+
+.tw19Verified {
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #1DA1F2;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.tw19VerifiedEmbed {
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  font-size: 9px;
+  width: 12px;
+  height: 12px;
+  background-color: #1DA1F2;
+  color: #fff;
+  border-radius: 50%;
+}
+
+/*Formatting for the Twitter bird icon*/
+.tw19Follow {
+    position:relative;
+    top: -1.7em;
+    width: 17px;
+    height: auto;
+    display: inline-block;
+    float: right;
+    color: #5EA9DD;
+}
+
+/* Text */
+.tw19User {
+  display: inline;
+}
+
+.tw19UserName {
+    position: relative;
+    top: -.2em;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tw19UserNameEmbed {
+    position: relative;
+    font-weight: bold;
+}
+
+.tw19UserHandle {
+    position: relative;
+    top: -.5em;
+    font-size: 16px;
+    color: #697882;
+}
+.tw19UserHandleEmbed {
+    position: relative;
+    color: #697882;
+}
+
+/*Formatting for the Tweet's actual text*/
+.tw19Text {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+/*Formatting for the span of the like count and timestamp*/
+.tw19Heart {
+  height: 10px;
+  width: auto;
+}
+
+.tw19LikesAndTime {
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 300;
+    color: #697882;
+    padding: 0em 0em .5em 0em;
+}
+
+.tw19TimeStamp {
+    padding: 0em 0em 0em 0.6em;
+}
+
+/*Formatting for the span of reply counts*/
+.tw19ReplyCount {
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 300;
+    color: #2C7BB8;
+    padding: .5em 0em 0em 0em;
+    border-top: .05em solid #dddddd;
+}
+
+/*Defines the color of "links" and "hashtags" in a Tweet*/
+.tw19Link{
+    text-decoration: none;
+    color: #2C7BB8;
+}

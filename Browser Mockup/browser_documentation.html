@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Documentation</title>
+    <link rel="stylesheet" type="text/css" href="browser.css">
+</head>
+<body>
+
+  <div class="browser">
+    <p class="search_logo chrome_logo">
+      <span class="chrome_blue">G</span><!-- DO NOT REMOVE COMMENTS
+    --><span class="chrome_red">o</span><!--
+    --><span class="chrome_yellow">o</span><!--
+    --><span class="chrome_blue">g</span><!--
+    --><span class="chrome_green">l</span><!--
+    --><span class="chrome_red">e</span>
+    </p>
+    <p class="search_bar">
+      <span class="search_term chrome_term">who is the current</span>
+    </p>
+    <p class="search_autocomplete">
+      <span>who is the current <b>green lantern</b></span><br/>
+      <span>who is the current <b>queen of genovia</b></span><br/>
+      <span>who is the current <b>james bond actress</b></span><br/>
+      <span>who is the current <b>va for mickey mouse</b></span><br/>
+      <span>who is the current <b>president</b></span>
+    </p>
+  </div>
+
+  <p>Now I might not be familiar with what are the hottest trends in modern AU,
+  but suppose your character needs to do some internet sleuthing,
+  or maybe they just want to know what vampires are. Perhaps you're writing
+  a fic about your character's public reputation. How might
+  you want to portray that? The work skin is meant to illustrate and simulate a search engine,
+  complete with highlightable text. No more do you need to screencap
+  and photoshop some pictures.</p>
+
+  <h3>Getting Started.</h3>
+
+  <p>First things first, <a href="https://archiveofourown.org/skins/new?skin_type=WorkSkin">create a work skin</a>, or open
+  an existing works skin you're planning to put CSS code into. After you save
+  the skin and see a <kbd>#workskin</kbd> next to everything, don't worry
+  about it. That's just AO3 making sure your code only works in the text
+  of your fic.</p>
+
+  <p>The first part is the main wrapper we call <kbd>browser</kbd>. We will
+  use this class to wrap the entire thing in a nice bow.</p>
+
+  <pre>
+  .browser {
+    min-width: 200px;
+    max-width: 80%;
+    margin: auto;
+  }
+  </pre>
+
+  <p>The browser wrapper's HTML will start out looking like this.</p>
+
+  <pre>
+  &lt;div class="browser"&gt;<br /> &lt;/div&gt;
+  </pre>
+
+  <h3>The Logo</h3>
+
+  <p>Next we have the browser's logo with <kbd>search_logo</kbd> to center
+  and give some padding to the logo.</p>
+
+  <pre>
+  .search_logo {
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+  }
+  </pre>
+
+  <p>Now we add code for the logo's color and font. I've provided two font options
+  for Google, the classic serif font, and the 2015 sans serif version. You are
+  free to change the font in <kbd>font-family</kbd> to whichever you want.</p>
+
+  <pre>
+  .chrome_logo {
+    font-weight: bold;
+    font-size: x-large;
+    font-family: "Lato", "Verdana", sans-serif;
+  }
+  .chromeold_logo {
+    font-weight: bold;
+    font-size: x-large;
+    font-family: "Cardo", "Garamond", serif;
+  }
+  .chrome_blue {
+    color: #4285F4;
+  }
+  .chrome_red {
+    color: #DB4437;
+  }
+  .chrome_yellow {
+    color: #F4B400;
+  }
+  .chrome_green {
+    color: #0F9D58;
+  }
+  </pre>
+
+  <p>With these classes, we can make the logo with the following HTML</p>
+
+  <div class="browser">
+    <p class="search_logo chrome_logo">
+      <span class="chrome_blue">G</span><!-- DO NOT REMOVE COMMENTS
+    --><span class="chrome_red">o</span><!--
+    --><span class="chrome_yellow">o</span><!--
+    --><span class="chrome_blue">g</span><!--
+    --><span class="chrome_green">l</span><!--
+    --><span class="chrome_red">e</span>
+    </p>
+  </div>
+
+  <pre>
+  &lt;div class="browser"&gt;<br /> &lt;p class="search_logo chrome_logo"&gt;<br /> &lt;span class="chrome_blue"&gt;G&lt;/span&gt;&lt;!-- DO NOT REMOVE COMMENTS<br /> --&gt;&lt;span class="chrome_red"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_yellow"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_blue"&gt;g&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_green"&gt;l&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_red"&gt;e&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;/div&gt;
+  </pre>
+
+  <p>You might notice how the different letters of 'Google' have been separated,
+  and that's to change the color. Also don't remove the commented parts unless
+  you want the letters to be more spaced out.</p>
+
+  <h3>The Search Bar</h3>
+
+  <p>Now for the search bar itself. These classes. The <kbd>chrome_term</kbd>
+  will put the border for the search bar like in Google. You can change the color
+  of this if you wish.</p>
+
+  <pre>
+  .search_bar {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+
+  .search_bar span {
+    position: relative;
+    display: block;
+    margin: 0 0 0 0;
+    padding: 5px;
+  }
+  .chrome_term {
+    border: 1px solid #aaa;
+  }
+</pre>
+
+  <p>Now, when we put the search bar stuff in, it'll look like this.</p>
+
+  <div class="browser">
+    <p class="search_logo chrome_logo">
+      <span class="chrome_blue">G</span><!-- DO NOT REMOVE COMMENTS
+    --><span class="chrome_red">o</span><!--
+    --><span class="chrome_yellow">o</span><!--
+    --><span class="chrome_blue">g</span><!--
+    --><span class="chrome_green">l</span><!--
+    --><span class="chrome_red">e</span>
+    </p>
+    <p class="search_bar">
+      <span class="chrome_term">Who is the current queen of genovia</span>
+    </p>
+  </div>
+
+  <pre>&lt;div class="browser"&gt;<br /> &lt;p class="search_logo chrome_logo"&gt;<br /> &lt;span class="chrome_blue"&gt;G&lt;/span&gt;&lt;!-- DO NOT REMOVE COMMENTS<br /> --&gt;&lt;span class="chrome_red"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_yellow"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_blue"&gt;g&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_green"&gt;l&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_red"&gt;e&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_bar"&gt;<br /> &lt;span class="chrome_term"&gt;<strong>Who is the current queen of genovia</strong>&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;/div&gt;
+  </pre>
+
+  <p>You change the search term within the span element of <kbd>search_bar</kbd>. The customizable
+  portion of the HTML code has been bolded for emphasis.</p>
+
+  <h3>Stats and Suggestions</h3>
+
+  <p>You might remember the stats that pop up from using Google. These clases below
+  will format the proper classes to look like the search results stats or
+  result suggestions.</p>
+
+  <pre>
+  .search_stats {
+    margin: 0 0 0 0;
+    color: #999;
+    font-size: smaller;
+    padding-top: 5px;
+  }
+
+  .search_dym {
+    margin: 0 0 0 0;
+    font-size: smaller;
+    padding-top: 5px;
+  }
+
+  .search_dym1 {
+    color: #de5246;
+  }
+
+  .search_dym2 {
+    color: #0645AD;
+    font-weight: bold;
+    font-style: italic;
+  }
+  </pre>
+
+  <p>Within the element with the class <kbd>search_stats</kbd>, you can display the amount of number of results of your search and how
+    fast it took for the engine to execute the search. Put an arbitrary number
+    or put zero for a plot point where nothing shows up (insert X-Files theme).</p>
+
+  <div class="browser">
+    <p class="search_logo chrome_logo">
+      <span class="chrome_blue">G</span><!-- DO NOT REMOVE COMMENTS
+    --><span class="chrome_red">o</span><!--
+    --><span class="chrome_yellow">o</span><!--
+    --><span class="chrome_blue">g</span><!--
+    --><span class="chrome_green">l</span><!--
+    --><span class="chrome_red">e</span>
+    </p>
+    <p class="search_bar">
+      <span class="chrome_term">Who is the current queen of genovia</span>
+    </p>
+    <p class="search_stats">About 24,040,000,000 results (0.56 seconds)</p>
+  </div>
+
+  <pre>&lt;div class="browser"&gt;<br /> &lt;p class="search_logo chrome_logo"&gt;<br /> &lt;span class="chrome_blue"&gt;G&lt;/span&gt;&lt;!-- DO NOT REMOVE COMMENTS<br /> --&gt;&lt;span class="chrome_red"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_yellow"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_blue"&gt;g&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_green"&gt;l&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_red"&gt;e&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_bar"&gt;<br /> &lt;span class="chrome_term"&gt;<strong>Who is the current queen of genovia</strong>&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_stats"&gt;<strong>About 24,040,000,000 results (0.56 seconds)</strong>&lt;/p&gt;<br /> &lt;/div&gt;
+  </pre>
+
+  <p>For memes or drama, search suggestion corrections can be added in the
+  <kbd>search_dym</kbd> classed element. The customizable portion is in the
+  <kbd>search_dym2</kbd> classed span.</p>
+
+  <div class="browser">
+    <p class="search_logo chrome_logo">
+      <span class="chrome_blue">G</span><!-- DO NOT REMOVE COMMENTS
+    --><span class="chrome_red">o</span><!--
+    --><span class="chrome_yellow">o</span><!--
+    --><span class="chrome_blue">g</span><!--
+    --><span class="chrome_green">l</span><!--
+    --><span class="chrome_red">e</span>
+    </p>
+    <p class="search_bar">
+      <span class="search_term chrome_term">Jack Sparrow</span>
+    </p>
+    <p class="search_dym">
+    <span class="search_dym1">Did you mean: </span><!-- DO NOT REMOVE COMMENTS
+  --><span class="search_dym2">Captain Jack Sparrow</span></p>
+  </div>
+
+  <pre>&lt;div class="browser"&gt;<br /> &lt;p class="search_logo chrome_logo"&gt;<br /> &lt;span class="chrome_blue"&gt;G&lt;/span&gt;&lt;!-- DO NOT REMOVE COMMENTS<br /> --&gt;&lt;span class="chrome_red"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_yellow"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_blue"&gt;g&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_green"&gt;l&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_red"&gt;e&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_bar"&gt;<br /> &lt;span class="search_term chrome_term"&gt;<strong>Jack Sparrow</strong>&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_dym"&gt;<br /> &lt;span class="search_dym1"&gt;Did you mean: &lt;/span&gt;&lt;!-- DO NOT REMOVE COMMENTS<br /> --&gt;&lt;span class="search_dym2"&gt;<strong>Captain Jack Sparrow</strong>&lt;/span&gt;&lt;/p&gt;<br /> &lt;/div&gt;</pre>
+
+<h3>Autocomplete Dropdown</h3>
+
+<p>While I don't believe actual dropdowns are allowed here on AO3, we can still
+scrape by with a bit of CSS.</p>
+
+<pre>
+.search_autocomplete {
+  border: 1px solid #aaa;
+  padding: 5px 5px 5px 5px;
+  margin-top: 0px;
+}</pre>
+
+<p>Now you have something resembling that dropdown that guesses what you're typing next.
+  Maybe you might need this to show recent searches to show related topics or trending scandals.</p>
+
+  <div class="browser">
+    <p class="search_logo chrome_logo">
+      <span class="chrome_blue">G</span><!-- DO NOT REMOVE COMMENTS
+    --><span class="chrome_red">o</span><!--
+    --><span class="chrome_yellow">o</span><!--
+    --><span class="chrome_blue">g</span><!--
+    --><span class="chrome_green">l</span><!--
+    --><span class="chrome_red">e</span>
+    </p>
+    <p class="search_bar">
+      <span class="search_term chrome_term">my husband is too</span>
+    </p>
+    <p class="search_autocomplete">
+      <span>my husband is too <b>big</b></span><br/>
+      <span>my husband is too <b>nice</b></span><br/>
+      <span>my husband is too <b>busy for me</b></span><br/>
+      <span>my husband is too <b>tired to make love</b></span><br/>
+      <span>my husband is too <b>big for me</b></span>
+    </p>
+  </div>
+
+<pre>&lt;div class="browser"&gt;<br /> &lt;p class="search_logo chrome_logo"&gt;<br /> &lt;span class="chrome_blue"&gt;G&lt;/span&gt;&lt;!-- DO NOT REMOVE COMMENTS<br /> --&gt;&lt;span class="chrome_red"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_yellow"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_blue"&gt;g&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_green"&gt;l&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_red"&gt;e&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_bar"&gt;<br /> &lt;span class="search_term chrome_term"&gt;<strong>my husband is too</strong>&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_autocomplete"&gt;<br /><strong> &lt;span&gt;my husband is too &lt;b&gt;big&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;my husband is too &lt;b&gt;nice&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;my husband is too &lt;b&gt;busy for me&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;my husband is too &lt;b&gt;tired to make love&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;my husband is too &lt;b&gt;big for me&lt;/b&gt;&lt;/span&gt;</strong><br /> &lt;/p&gt;<br /> &lt;/div&gt;
+</pre>
+
+<p>Or, you know, maybe your character is looking up something naughty and dreading
+the entire internet journey as they read the suggestions.</p>
+
+  <h3>Not Google?</h3>
+  <p>
+    Google might not be your search engine of your choice in the world
+    you're writing for. Good thing I designed this work skin to allow
+    for others to easily customize. For a test case, I'll be using Naver,
+    a Korean search engine.</p>
+
+    <pre>
+  .naver_logo {
+    font-weight: bold;
+    font-size: x-large;
+    font-family: "Maven Pro", "Verdana", sans-serif;
+  }
+  .naver_green {
+    color: #2DB400;
+  }
+  .naver_term {
+    border: 2px solid #2DB400;
+  }
+  </pre>
+
+    <p>It's not an exact copy, but this could be
+    useful for some of you writing for Kpop fandoms or Korean webtoons
+    or novels.
+  </p>
+
+  <div class="browser">
+    <p class="search_logo naver_logo">
+      <span class="naver_green">NAVER</span>
+    </p>
+    <p class="search_bar">
+      <span class="search_term naver_term">where in the world is</span>
+    </p>
+    <p class="search_autocomplete">
+      <span>where in the world is <b>kim namjoon</b></span><br/>
+      <span>where in the world is <b>kim seokjin</b></span><br/>
+      <span>where in the world is <b>min yoongi</b></span><br/>
+      <span>where in the world is <b>jung hoseok</b></span><br/>
+      <span>where in the world is <b>park jimin</b></span><br/>
+      <span>where in the world is <b>kim taehyung</b></span><br/>
+      <span>where in the world is <b>jeon jungkook</b></span>
+    </p>
+  </div>
+
+  <pre>&lt;div class="browser"&gt;<br /> &lt;p class="search_logo naver_logo"&gt;<br /> &lt;span class="naver_green"&gt;NAVER&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_bar"&gt;<br /> &lt;span class="search_term naver_term"&gt;<strong>where in the world is</strong>&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_autocomplete"&gt;<br /><strong> &lt;span&gt;where in the world is &lt;b&gt;kim namjoon&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;where in the world is &lt;b&gt;kim seokjin&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;where in the world is &lt;b&gt;min yoongi&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;where in the world is &lt;b&gt;jung hoseok&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;where in the world is &lt;b&gt;park jimin&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;where in the world is &lt;b&gt;kim taehyung&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;</strong><br /><strong> &lt;span&gt;where in the world is &lt;b&gt;jeon jungkook&lt;/b&gt;&lt;/span&gt;</strong><br /> &lt;/p&gt;<br /> &lt;/div&gt;
+  </pre>
+
+  <p>
+    Maybe your fic's setting was set before 2015, before Google filed
+    the edges of their logo. We can simply change the font family of
+    the <code>chrome_logo</code> class, as demonstrated in
+    <code>chromeold_logo</code> below:
+  </p>
+
+  <div class="browser">
+    <p class="search_logo chromeold_logo">
+      <span class="chrome_blue">G</span><!-- DO NOT REMOVE COMMENTS
+    --><span class="chrome_red">o</span><!--
+    --><span class="chrome_yellow">o</span><!--
+    --><span class="chrome_blue">g</span><!--
+    --><span class="chrome_green">l</span><!--
+    --><span class="chrome_red">e</span>
+    </p>
+    <p class="search_bar">
+      <span class="chrome_term">Who is the current queen of genovia</span>
+    </p>
+  </div>
+
+  <pre>&lt;div class="browser"&gt;<br /> &lt;p class="search_logo chromeold_logo"&gt;<br /> &lt;span class="chrome_blue"&gt;G&lt;/span&gt;&lt;!-- DO NOT REMOVE COMMENTS<br /> --&gt;&lt;span class="chrome_red"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_yellow"&gt;o&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_blue"&gt;g&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_green"&gt;l&lt;/span&gt;&lt;!--<br /> --&gt;&lt;span class="chrome_red"&gt;e&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;p class="search_bar"&gt;<br /> &lt;span class="chrome_term"&gt;Who is the current queen of genovia&lt;/span&gt;<br /> &lt;/p&gt;<br /> &lt;/div&gt;
+  </pre>
+
+  <p>And that's about it. The following chapter is just the entire raw CSS code for easier copy pasting.</p>
+</body>
+</html>

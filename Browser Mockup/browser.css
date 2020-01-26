@@ -1,0 +1,93 @@
+body {
+  font-family: Verdana;
+}
+
+.browser {
+  min-width: 200px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.search_logo {
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.chrome_logo {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Lato", "Verdana", sans-serif;
+}
+.chromeold_logo {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Cardo", "Garamond", serif;
+}
+.chrome_blue {
+  color: #4285F4;
+}
+.chrome_red {
+  color: #DB4437;
+}
+.chrome_yellow {
+  color: #F4B400;
+}
+.chrome_green {
+  color: #0F9D58;
+}
+.chrome_term {
+  border: 1px solid #aaa;
+}
+
+.naver_logo {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Maven Pro", "Verdana", sans-serif;
+}
+.naver_green {
+  color: #2DB400;
+}
+.naver_term {
+  border: 2px solid #2DB400;
+}
+
+.search_bar {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.search_bar span {
+  position: relative;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 5px;
+}
+
+.search_autocomplete {
+  border: 1px solid #aaa;
+  padding: 5px 5px 5px 5px;
+  margin-top: 0px;
+}
+
+.search_stats {
+  margin: 0 0 0 0;
+  color: #999;
+  font-size: smaller;
+  padding-top: 5px;
+}
+
+.search_dym {
+  margin: 0 0 0 0;
+  font-size: smaller;
+  padding-top: 5px;
+}
+
+.search_dym1 {
+  color: #de5246;
+}
+
+.search_dym2 {
+  color: #0645AD;
+  font-weight: bold;
+  font-style: italic;
+}

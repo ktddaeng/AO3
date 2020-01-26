@@ -68,12 +68,14 @@
 }
 
 .replyAND {
-    width: 200px;
-    background: #FEFEFE;
-    color: #000000;
-    padding: .7em;
-    border-radius: .2em;
-    position: relative;
+  float: right;
+  color: #000000;
+  border-radius: 0.3em;
+  padding: 0.7em ;
+  background: #FEFEFE;
+  max-width: 56%;
+  clear: both;
+  position: relative;
 }
 
 .replyAND p {
@@ -81,22 +83,24 @@
 }
 
 .replyIconWrapperAND {
-    display: block;
-    width: 75px;
-    position: relative;
-    text-align: right;
+  float: right;
+  display: block;
+  width: 75px;
+  position: relative;
+  text-align: right;
+  clear: both;
 }
 
 .replyIconWrapperAND::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -.5em;
-    width: .5em;
-    height: 0;
-    border-top: 1em solid #FEFEFE;
-    border-right: 1em solid transparent;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -.5em;
+  width: .5em;
+  height: 0;
+  border-top: 1em solid #FEFEFE;
+  border-right: 1em solid transparent;
 }
 
 /* TEXT */

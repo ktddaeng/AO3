@@ -1,0 +1,47 @@
+/* Make sure that padding behaves as expected */
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.twWin {background-color: #77c7f7;} /* Winning option color */
+.twOpt {background-color: #e1e8ed;} /* Other options color */
+.twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
+.twLink {color: #2C7BB8;}
+
+.twPollContainer {
+  max-width: 450px;
+  border: 1px solid #ddd;
+  border-radius: .3em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.twPollContainer p{
+  margin: 0;
+  padding: 0;
+}
+
+.twPollOption {
+  padding: .3em 0em .3em 0em;
+  margin: .5em 0em .5em 0em;
+  border-radius: .3em;
+  white-space: nowrap;
+}
+
+.twLikesAndTime {
+    display: inline-block;
+    width: 100%;
+    color: #697882;
+}
+
+.twTimeStamp {
+    padding: 0em 0em 0em 0.6em;
+}
+
+.p14 {
+  width: 14%;
+}
+
+.p7 {width: 7%}
+.p84 {width: 84%;}
+.p29 {width: 29%;}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation Tweet 2019</title>
+    <link rel="stylesheet" type="text/css" href="tweets2019.css">
+</head>
+<body>
+    <p>Sup, back at it again, but this time with a more updated version of embedded highlightable "Tweets" for your fics.
+    In addition to adapting to Twitter's new look as of 2019, I've added some more features such as quote retweeting.
+    In case you've never read my stuff before, please refer to the <a href="https://archiveofourown.org/works/8631214/chapters/20890940">previous chapters on the original Twitter mockup.</a></p>
+
+    <h2>Twitter (2019) Simple Embedded Tweet</h2>
+
+    <p>Much of new look hasn't exactly changed, except for the lower half. Thankfully the new Twitter has less fancy icons,
+      but the added complexity of things like quote retweets basically broke AO3's ability to handle the number of nested
+      span elements and images, so I took the janky approach and used emoticons and fancy CSS. This means that mobile and desktop view will vary wildly.
+      Also ran into some issues managing the different span containers so I wasn't able to quite get that border line between the reply count
+      and the rest of the Tweet to reach the edges. Oh, well, still looks pretty legit, right?</p>
+
+    <div class="tw19">
+        <p class="tw19Body">
+          <span class="tw19User">
+              <img class="tw19Avatar" src="https://farm8.staticflickr.com/7802/46881290791_909a8c9898_m.jpg">
+              <span>
+                  <span class="tw19UserName">Kayden Orona
+                  <span class="tw19Verified">✔</span>
+                  </span>
+                  <br>
+                  <span class="tw19UserHandle">@kayorona</span>
+              </span>
+              <img class="tw19Follow" src="https://i.ibb.co/vBp37v2/p6lbN22.png">
+              <br>
+          </span>
+          <span class="tw19Text">
+              We're curious: What would make your workday a whole lot better?
+              <span class="tw19Link">#career #poll</span>
+          </span>
+          <span class="tw19LikesAndTime">
+              <span>234 votes • Final results</span><br/>
+              <span>❤ 123</span>
+              <span class="tw19TimeStamp">3:09 PM - 5 May 2014 </span>
+          </span>
+          <span class="tw19ReplyCount">
+              192 people are talking about this
+          </span>
+        </p>
+    </div>
+
+    <p>We're curious: What would make your workday a whole lot better? #career #poll</p>
+    <div class="pollContainer">
+      <div class="tw19pollOption">
+        <div style="width: 35%; height: 30px;" class="tw19pollBar tw19win"></div>
+        <div class="tw19pollText"><span class="tw19pollTextB">35%</span> A Better Boss</div>
+      </div>
+      <div class="tw19pollOption">
+        <div style="width: 14%; height: 30px;" class="tw19pollBar tw19opt"></div>
+        <div class="tw19pollText"><span class="tw19pollTextB">14%</span> Fewer Emails</div>
+      </div>
+      <div class="tw19pollOption">
+        <div style="width: 31%; height: 30px;" class="tw19pollBar tw19opt"></div>
+        <div class="tw19pollText"><span class="tw19pollTextB">31%</span> A Private Office</div>
+      </div>
+      <div class="tw19pollOption">
+        <div style="width: 20%; height: 30px;" class="tw19pollBar tw19opt"></div>
+        <div class="tw19pollText"><span class="tw19pollTextB">20%</span> Free Snacks</div>
+      </div>
+    </div>
+
+    <p>Much like the Instagram mockup, I have bolded the portions where you should change to personalize the HTML code</p>
+
+    </body>
+</html>

@@ -169,11 +169,6 @@
 }
 
 /*Formatting for the span of the like count and timestamp*/
-.tw19Heart {
-  height: 10px;
-  width: auto;
-}
-
 .tw19LikesAndTime {
     display: inline-block;
     font-size: 14px;
@@ -200,6 +195,37 @@
 
 /*Defines the color of "links" and "hashtags" in a Tweet*/
 .tw19Link{
-    text-decoration: none;
     color: #2C7BB8;
 }
+
+/*twitter Poll emulation*/
+
+.pollContainer {
+  position: relative;
+}
+
+/* Container for skill bars */
+.tw19pollOption {
+  height: 30px;
+  width: 300px;
+  position: relative;
+  text-align: left; /* Right-align text */
+  margin: 5px 0px 5px 0px;
+}
+
+.tw19pollBar {
+  position: absolute;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.tw19pollText {
+  position: absolute;
+  color: #14171A; /* Black text color */
+  z-index: 2;
+  padding: 5px 0px 0px 5px;
+}
+
+.tw19win {background-color: #1DA1F2;} /* Winning option color */
+.tw19opt {background-color: #AAB8C2;} /* Other options color */
+.tw19pollTextB {font-weight: bold; padding-right: 5px;}

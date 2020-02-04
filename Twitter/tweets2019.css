@@ -193,39 +193,34 @@
     border-top: .05em solid #dddddd;
 }
 
-/*Defines the color of "links" and "hashtags" in a Tweet*/
-.tw19Link{
-    color: #2C7BB8;
+/*Defines the colors and formats of certain elements*/
+.twWin {background-color: #77c7f7;} /* Winning option color */
+.twOpt {background-color: #e1e8ed;} /* Other options color */
+.twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
+.twLink {color: #2C7BB8;} /*hashtag and link colors*/
+
+.twPollOption p{
+  margin: 0;
+  padding: 0;
 }
 
-/*twitter Poll emulation*/
-
-.pollContainer {
-  position: relative;
+.twPollOption {
+  padding: .3em 0em .3em 0em;
+  margin: .5em 0em .5em 0em;
+  border-radius: .3em;
+  white-space: nowrap;
 }
 
-/* Container for skill bars */
-.tw19pollOption {
-  height: 30px;
-  width: 300px;
-  position: relative;
-  text-align: left; /* Right-align text */
-  margin: 5px 0px 5px 0px;
+.twLikesAndTime {
+    display: inline-block;
+    width: 100%;
+    color: #697882;
 }
 
-.tw19pollBar {
-  position: absolute;
-  border-radius: 5px;
-  z-index: 1;
+.twTimeStamp {
+    padding: 0em 0em 0em 0.6em;
 }
 
-.tw19pollText {
-  position: absolute;
-  color: #14171A; /* Black text color */
-  z-index: 2;
-  padding: 5px 0px 0px 5px;
-}
-
-.tw19win {background-color: #1DA1F2;} /* Winning option color */
-.tw19opt {background-color: #AAB8C2;} /* Other options color */
-.tw19pollTextB {font-weight: bold; padding-right: 5px;}
+.p7 {width: 7%}
+.p84 {width: 84%;}
+.p29 {width: 29%;}

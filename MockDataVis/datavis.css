@@ -16,7 +16,12 @@
   padding: 10px;
 }
 
-.twPollContainer p{
+.twPollContainer p {
+  margin: 0;
+  padding: 0;
+}
+
+.twPollOption p{
   margin: 0;
   padding: 0;
 }
@@ -38,9 +43,7 @@
     padding: 0em 0em 0em 0.6em;
 }
 
-.p14 {
-  width: 14%;
-}
+.p14 { width: 14%;}
 
 .p7 {width: 7%}
 .p84 {width: 84%;}

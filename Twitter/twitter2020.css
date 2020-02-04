@@ -9,7 +9,6 @@
 .twBody {
   border: .05em solid #ddd;
   border-radius: .3em;
-  background-color: #fff;
 }
 
 .twEmbed {
@@ -119,20 +118,23 @@
   top: -0.5em;
   font-weight: normal;
   font-size: smaller;
-  color: #697882;
+  /* color: #697882; */
+  opacity: 60%;
 }
 
 .twHandleEmbed {
   position: relative;
   font-weight: normal;
-  color: #697882;
+  /* color: #697882; */
+  opacity: 60%;
   margin-left: 0.3em;
 }
 
 /*Formatting for the span of the like count and timestamp*/
 .twStats {
-  color: #697882;
+  /* color: #697882; */
   width: 100%;
+  opacity: 60%;
 }
 
 .twTime {
@@ -140,7 +142,7 @@
 }
 
 /*Formatting for the span of reply counts*/
-.twReply {
+.twReplies {
     width: 100%;
     font-weight: 300;
     padding-top: 0.5em;
@@ -166,7 +168,8 @@
 .twNM {background-color: #14242C; color: #fff;} /* Night mode background */
 .twOptNM {background-color: #3B5364} /* Other Options Color Night Mode*/
 .twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
-.twLink {color: #2C7BB8} /*hashtag and link colors*/
+.twReply {opacity: 60%}
+.twLink {color: #1DA1F2;} /*hashtag and link colors*/
 
 .p0 {width: 0%}
 .p1 {width: 1%}

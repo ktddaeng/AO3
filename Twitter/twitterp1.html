@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repository: Twitter - Chapter 1</title>
+    <link rel="stylesheet" type="text/css" href="twitter2020.css">
+    <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p>"I just wonder, how possible would it be to emulate polls? I can think of
+    at least one twitter fic in which the choices the audience made (and the
+    percentages of how many people voted for what) contributed to the narrative,
+    and many RPers do polls for stuff. Then again I'm mostly thinking from the
+    "converting twitter stuff to live forever on the Archive" point of view,
+    and I'm not sure if that's what you originally intended."</p>
+
+  <p>- <a href="https://archiveofourown.org/works/8631214/comments/278084290" rel="nofollow">genderneutralnoun</a>, comment from Repository, Chapter 4</p>
+
+  <p>The other day, a commenter asked me if it was possible to emulate polls,
+    and I got to work trying to answer that question and made this.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://thumbs2.imgbox.com/6c/98/B5Dg67C0_t.jpg"><!---
+      ---><span>Lee Jordan<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@leejordan</span></span></div>
+    <div>Who won the House Cup in 1991? <span class="twLink">#Hogwarts #HHC #HouseCup</span></div>
+    <div class="twPoll twOpt p27"><span class="twBold">27%</span>Slytherin</div>
+    <div class="twPoll twOpt p25"><span class="twBold">25%</span>Hufflepuff</div>
+    <div class="twPoll twWin p28"><span class="twBold">28%</span>Griffindor</div>
+    <div class="twPoll twOpt p20"><span class="twBold">20%</span>Ravenclaw</div>
+    <div class="twStats"><!---
+    --->14 votes • Final results<br/><!---
+    --->❤ 2<span class="twTime"> 6:06 AM - Feb 17, 2016</span></div>
+    <div class="twReplies twLink">192 people are talking about this</div>
+  </div>
+
+  <p>Then I got worried about
+    cluttering my work skin from my other guide "Repository" and dealing with
+    my old code was a real nightmare, so I decided to make a proper guide to
+    properly overhaul the Twitter work skin to a more streamlined, modular
+    design with more capabilities. Components like headers, polls, pictures,
+    quote retweets are designed to be easily removed and put into the tweet.</p>
+
+  <p>Much like "Repository," this guide aims to use as much pure CSS and HTML
+    as possible and is hopefully easy to understand.</p>
+
+  <p>
+    <strong>What You Need</strong>
+  </p>
+
+  <p>Although I'll be going through the code piece by piece, this guide is meant
+    for beginner coders who have some understanding of HTML and CSS. If you do
+    not, please familiarize yourself with the basics on sites like <a href="https://www.w3schools.com/" rel="nofollow">
+    W3 Schools</a>. You should also be comfortable with setting up your
+    own workskin, but if you need to learn that, <a href="https://archiveofourown.org/admin_posts/1370" rel="nofollow">
+    AO3 has documentation on how to do this</a>.</p>
+
+  <p>And since we're getting our hands dirty with code, get yourself a proper
+    IDE to work in. And don't go trying to edit HTML on your phone. Better to
+    be safe than sorry. I personally recommend Atom for something cross platform,
+    clean, and lightweight, but any IDE that supports HTML and CSS will do.
+    Feel free to leave comments below on recommendations, if you have any.</p>
+
+  <p><strong>Understanding this Guide</strong></p>
+
+  <p>Snippets of code will be written in a different font (namely Courier).
+  The specific parts where the user should pay attention to, whether it's for
+  customization or a class combination, will be bolded in red as follows</p>
+
+  <p class="tut">&lt;div&gt; Hello my name is &lt;span&gt;
+    <span class="red">Cloud</span>
+  &lt;/span&gt;!&lt;/div&gt;</p>
+
+  <p>You will not need to copy paste anything in CSS (stuff with braces), but
+  you should try to copy paste with the HTML snippets scattered about. This way
+  you will learn how to pick and choose which components you need.</p>
+
+  <p>For quick reference, the HTML templates and complete CSS code dump will
+    be placed at the end of this work complete with a changelog in case
+    anything has been changed.</p>
+
+  <p><strong>Need Help or Permission?</strong></p>
+
+  <p>Users are free to modify the code to however they like, no need to
+    personally ask me, but a credit or two can go a long way.</p>
+
+  <p>As for users who are having trouble with their code, you can either leave a
+    comment here, or message me through any of <a href="https://archiveofourown.org/users/gadaursan/profile" rel="nofollow">my
+    listed social media accounts on my profile</a>. Please be as detailed as
+    possible about your issue, so sharing code like a Github Gist or a Codepen
+    link would be much appreciated.</p>
+</body>
+</html>

@@ -6,6 +6,11 @@
   padding: 1em;
 }
 
+.tw p {
+  margin: 0;
+  padding: 0;
+}
+
 .twBody {
   border: .05em solid #ddd;
   border-radius: .3em;
@@ -18,11 +23,6 @@
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   overflow: hidden;
-}
-
-.tw p {
-  margin: 0;
-  padding: 0;
 }
 
 /*Body formatting for solo Twitter polling*/
@@ -118,21 +118,18 @@
   top: -0.5em;
   font-weight: normal;
   font-size: smaller;
-  /* color: #697882; */
   opacity: 60%;
 }
 
 .twHandleEmbed {
   position: relative;
   font-weight: normal;
-  /* color: #697882; */
   opacity: 60%;
   margin-left: 0.3em;
 }
 
 /*Formatting for the span of the like count and timestamp*/
 .twStats {
-  /* color: #697882; */
   width: 100%;
   opacity: 60%;
 }
@@ -165,12 +162,31 @@
 /*Defines the colors and formats of certain elements*/
 .twWin {background-color: #74CBFB} /* Winning option color */
 .twOpt {background-color: #e1e8ed} /* Other options color */
-.twNM {background-color: #14242C; color: #fff;} /* Night mode background */
+.twNM { background-color: #14242C; color: #fff; border-color: #3B5364; }
+.twNM .twBody { border-color: #3B5364; }  /* Night mode */
+.twNM .twReplies { border-top: .05em solid #3B5364;}
 .twOptNM {background-color: #3B5364} /* Other Options Color Night Mode*/
 .twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
 .twReply {opacity: 60%}
 .twLink {color: #1DA1F2;} /*hashtag and link colors*/
 
+/*Formatting for code portions*/
+.tut {
+  font-family: Courier, monospace;
+}
+.tut span{
+  color: #CC0000;
+  font-family: Courier, monospace;
+  font-weight: bold;
+} /*For highlighting text for tutorials*/
+table {
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+table p {margin: 0; padding: 0;}
+
+/*Percentage Presets*/
 .p0 {width: 0%}
 .p1 {width: 1%}
 .p2 {width: 2%}

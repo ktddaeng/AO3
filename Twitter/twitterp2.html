@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repository: Twitter - Chapter 2</title>
+    <link rel="stylesheet" type="text/css" href="twitter2020.css">
+    <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding: 5em;
+    }
+  </style>
+</head>
+<body>
+  <p>In this chapter, we will make a very simple Tweet, as shown here.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+      ---><span>Euphy<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@officialeuphemia</span></span><!---
+  ---></div>
+      <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+      <div class="twStats"><!---
+      --->❤ 1.2M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
+      <div class="twReplies twLink">32.2K people are talking about this</div>
+  </div>
+
+  <p><strong>The Wrapper</strong></p>
+  <p>We begin by creating a <kbd>div</kbd> container to wrap everything up
+  in a nice bow. We also want to start decorating this div with the <kbd>tw</kbd>
+  and <kbd>twBody</kbd> class in CSS.</p>
+
+  <p class="tut">.tw {<br />&nbsp;max-width: 400px;<br />&nbsp;margin-left: auto;<br />&nbsp;margin-right: auto;<br />&nbsp;padding: 1em;<br />}</p>
+  <p class="tut">.tw p {<br />&nbsp;margin: 0;<br />&nbsp;padding: 0;<br />}</p>
+  <p class="tut">.twBody {<br />&nbsp;border: .05em solid #ddd;<br />&nbsp;border-radius: .3em;<br />}</p>
+
+  <p>We set the container to not exceed 400px in width, center it horizontally,
+  and make sure the margins and padding are correct. AO3 has a habit of stuffing
+  paragraphs and line breaks depending on how you paste HTML into the editor. We
+  we can mitigate this by making sure the blank paragraphs take up no space in
+  our tweet. We also add a small border for our container.</p>
+
+  <p>We do the following in HTML. Note how we've combined the <kbd>tw</kbd>
+  and <kbd>twBody</kbd> classes.</p>
+
+  <div class="tw twBody">&nbsp;</div>
+
+  <p class="tut">&lt;div class="<span>tw twBody</span>"&gt;<br />&lt;/div&gt;</p>
+
+  <p>Now we can start adding compenents inside our Tweet.</p>
+
+  <p><strong>The Header</strong></p>
+
+  <p>Next, we want to make our header which will contain the user's profile
+  picture, their name, and their handle.</p>
+
+  <p>First is the Twitter user's name and handle. We use the classes <kbd>twUser</kbd>
+    to make a shell for the username and <kbd>twHandle</kbd> to make this part a
+    lighter color.</p>
+
+  <p class="tut">.twUser {<br />&nbsp;font-weight: bold;<br />&nbsp;font-size: larger;<br />&nbsp;margin-bottom: -0.1em;<br />}</p>
+  <p class="tut">.twHandle {<br />&nbsp;position: relative;<br />&nbsp;top: -0.5em;<br />&nbsp;font-weight: normal;<br />&nbsp;font-size: smaller;<br />&nbsp;opacity: 60%;<br />}</p>
+
+  <p>Here's the HTML. Note that there are comments embedded in the HTML,
+  but don't remove those. AO3 will see these empty spaces and feel obligated
+  to stuff paragraphs and line breaks in between, breaking the code. Ideally,
+  we wouldn't need these comments, but we want the code to be readable by humans.</p>
+
+  <div class="twUser"><!---
+    ---><span>Euphy<br/><!---
+    ---><span class="twHandle">@officialeuphemia</span></span></div>
+
+  <p class="tut">&lt;div class="<span>twUser</span>"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;<span>TWITTER NAME HERE</span>&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="<span>twHandle</span>"&gt;<span>TWITTER HANDLE HERE</span>&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;</p>
+
+  <p>Next is the profile picture. This is one of the few parts of the work skin
+    that requires external images. We will make a class for the profile called
+    <kbd>twAvatar</kbd>.</p>
+
+  <p class="tut">.twAvatar {<br />&nbsp;width: 40px;<br />&nbsp;height: auto;<br />&nbsp;float: left;<br />&nbsp;margin-right: 0.3em;<br />&nbsp;border-radius: 20px;<br />}</p>
+
+  <p>This class will format the picture into a circle with a border, make it
+    hug the side of its containing element. I recommend using pictures that are
+    square and around 60px in case readers aren't using the skins.</p>
+
+  <table>
+  <tbody>
+  <tr>
+  <td>
+  <p><img src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png" width="60px"/></p>
+  </td>
+  <td>
+  <p><img class="twAvatar" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png" /></p>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <p>An unformatted image<br/>(60px x 60px)</p>
+  </td>
+  <td>
+  <p>The same image classed<br/>as twAvatar</p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+  <p class="tut">&lt;img class="twAvatar" src="<span>IMAGE URL HERE</span>" /&gt;</p>
+
+  <p>We also need to make a class for a verified account icon. We call this class
+    <kbd>twVerified</kbd>, which just makes a blue <kbd>span</kbd> container
+    with a white check mark inside.</p>
+
+  <p class="tut">.twVerified {<br />&nbsp;position: relative;<br />&nbsp;bottom: 2px;<br />&nbsp;display: inline-block;<br />&nbsp;font-weight: normal;<br />&nbsp;text-align: center;<br />&nbsp;font-size: 10px;<br />&nbsp;width: 15px;<br />&nbsp;height: 15px;<br />&nbsp;margin-left: 0.3em;<br />&nbsp;background-color: #1DA1F2;<br />&nbsp;color: #fff;<br />&nbsp;border-radius: 50%;<br />}</p>
+
+  <p>Now it looks like this in HTML.</p>
+
+  <p align="center"><span class="twVerified">✔</span></p>
+
+  <p class="tut">&lt;span class="twVerified"&gt;✔&lt;/span&gt;</p>
+
+  <p>It doesn't resemble the original, but it should do the job. This is an
+  optional feature, and you can remove it from later code if you like.</p>
+
+  <p>We can combine the three parts and insert them into our div container.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+      ---><span>Euphy<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@officialeuphemia</span></span><!---
+    ---></div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt; <br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="<span>IMAGE URL HERE</span>"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;<span>TWITTER NAME HERE&lt;span class="twVerified"&gt;✔&lt;/span&gt;</span>&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;<span>TWITTER HANDLE HERE</span>&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>So far, so good?</p>
+
+  <p><strong>The Main Text</strong></p>
+
+  <p>There isn't really anything fancy here except for one thing: hashtags.</p>
+
+  <p class="tut">.twLink {color: #1DA1F2}</p>
+
+  <p>This element uses the class <kbd>twLink</kbd> which will just change the
+    color when you enclose the hashtags in the spans of that class. It looks
+    like this:</p>
+
+  <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+
+  <p class="tut">&lt;div&gt;<span>TWITTER TEXT HERE</span>&lt;span class="<span>twLink</span>"&gt;<span>HASHTAGS HERE</span>&lt;/span&gt;&lt;/div&gt;</p>
+
+  <p>We can add this to the bottom of the tweet after the header.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+      ---><span>Euphy<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@officialeuphemia</span></span><!---
+  ---></div>
+    <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;TWITTER NAME HERE&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;TWITTER HANDLE HERE&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> <span>&lt;div&gt;TWITTER TEXT HERE&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
+
+  <p>Now this looks more like a Tweet, and you can honestly call it a day here,
+  but we still have a few more parts to make it look a bit more authentic.</p>
+
+  <p><strong>The Statistics</strong></p>
+
+  <p>We have the class <kbd>twStats</kbd> for the <kbd>div</kbd> containing
+  the likes and timestamp. We need a bit of extra formatting on the timestamp
+  so it is reasonably spaced away from the likes.</p>
+
+  <p class="tut">.twStats {<br />&nbsp;width: 100%;<br />&nbsp;opacity: 60%;<br />}</p>
+  <p class="tut">.twTime {<br />&nbsp;padding: 0em 0em 0em 0.6em;<br />}</p>
+
+  <p>All it does is change the opacity of the text so it's lighter colored.</p>
+
+  <div class="twStats"><!---
+  --->❤ 4.6M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
+
+  <p class="tut">&lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ <span>LIKES COUNT HERE</span>&lt;span class="twTime"&gt; <span>TIMESTAMP HERE</span>&lt;/span&gt;&lt;/div&gt;</p>
+
+  <p>We put this in our Tweet as follows.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+      ---><span>Euphy<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@officialeuphemia</span></span><!---
+  ---></div>
+      <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+      <div class="twStats"><!---
+      --->❤ 1.2M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;TWITTER HANDLE HERE&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;TWITTER HANDLE HERE&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;div&gt;TWITTER TEXT HERE&lt;/div&gt;<br /> <span>&lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ LIKES COUNT HERE&lt;span class="twTime"&gt;TIMESTAMP HERE&lt;/span&gt;&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
+
+  <p><strong>The Reply Count</strong></p>
+
+  <p>We use the <kbd>twReplies</kbd> class for this.</p>
+
+  <p class="tut">.twReplies {<br />&nbsp;width: 100%;<br />&nbsp;font-weight: 300;<br />&nbsp;padding-top: 0.5em;<br />&nbsp;margin-top: 0.5em;<br />&nbsp;border-top: .05em solid #ddd;<br />}</p>
+
+  <p>This changes the opacity of the text and makes a border on the top.</p>
+
+  <div class="twReplies twLink">32.2K people are talking about this</div>
+
+  <p class="tut">&lt;div class="twReplies twLink"&gt;<span>REPLY COUNT HERE</span> people are talking about this&lt;/div&gt;</p>
+
+  <p>We put this at the end of our main container as the finishing touch.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+      ---><span>Euphy<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@officialeuphemia</span></span><!---
+  ---></div>
+      <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+      <div class="twStats"><!---
+      --->❤ 1.2M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
+      <div class="twReplies twLink">32.2K people are talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;TWITTER NAME HERE&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;TWITTER HANDLE HERE&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;div&gt;TWITTER TEXT HERE&lt;/div&gt;<br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ LIKES COUNT HERE&lt;span class="twTime"&gt;TIMESTAMP HERE&lt;/span&gt;&lt;/div&gt;<br /> <span>&lt;div class="twReplies twLink"&gt;REPLY COUNT HERE people are talking about this&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
+
+  <p>And now we have reached the end of this tutorial with a complete Tweet.
+    In the next chapter, we will learn how to integrate other kinds of content
+    in our Tweet.</p>
+
+</body>
+</html>

@@ -20,7 +20,7 @@
       ---><span>Euphy<span class="twVerified">✔</span><br/><!---
       ---><span class="twHandle">@officialeuphemia</span></span><!---
   ---></div>
-      <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
+      <div class="twText">met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
       <div class="twStats"><!---
       --->❤ 1.2M<span class="twTime"> 6:06 PM • August 12, 2017</span></div>
       <div class="twComments ">32.2K people are talking about this</div>
@@ -57,7 +57,8 @@
 
   <p>First is the Twitter user's name and handle. We use the classes <kbd>twUser</kbd>
     to make a shell for the username and <kbd>twHandle</kbd> to make this part a
-    lighter color.</p>
+    lighter color. Why, you ask, do we change the opacity of the text instead
+    of just choosing a grey? All will be revealed later.</p>
 
   <p class="tut">.twUser {<br />&nbsp;font-weight: bold;<br />&nbsp;font-size: larger;<br />&nbsp;margin-bottom: -0.1em;<br />}</p>
   <p class="tut">.twHandle {<br />&nbsp;position: relative;<br />&nbsp;top: -0.5em;<br />&nbsp;font-weight: normal;<br />&nbsp;font-size: smaller;<br />&nbsp;opacity: 60%;<br />}</p>
@@ -200,7 +201,8 @@
 
   <p><strong>The Reply Count</strong></p>
 
-  <p>We use the <kbd>twComments</kbd> class for this.</p>
+  <p>In the embedded Tweet, replies counted at the bottom of the container, and
+    we will use the <kbd>twComments</kbd> class.</p>
 
   <p class="tut">.twComments {<br />&nbsp;width: 100%;<br />&nbsp;font-weight: 300;<br />&nbsp;padding-top: 0.5em;<br />&nbsp;margin-top: 0.5em;<br />&nbsp;border-top: .05em solid #ddd;<br />}</p>
 

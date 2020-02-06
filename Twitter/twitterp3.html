@@ -12,7 +12,187 @@
   </style>
 </head>
 <body>
-  <p>In this chapter, we will make a Tweet things like pictures, replying to
-  tags, and quote retweets.</p>
+  <p>In this chapter, we will make a Tweet things like pictures, single replies, and quote retweets.</p>
+
+  <p><strong>Tweet Replies</strong></p>
+
+  <p>While this skin still doesn't allow for creating Tweet threads, you can
+  indicate if a tweet has been made in reply to another tweet. We use the class
+  <kbd>twReply</kbd> to style the div containing that reply. This message
+  should only contain two parts: the phrase "replying to" and the handle of
+  the account being replied to.</p>
+
+  <p class="tut">.twReply span:first-child {<br />&nbsp;opacity: 60%;<br />}</p>
+  <p class="tut">.twReply span:last-child {<br />&nbsp;color: #1DA1F2;<br />}</p>
+
+  <p>The first span will always be the "replying to" phrase and is colored as
+  such. The last span in this <kbd>div</kbd> will be colored like a link.</p>
+
+  <div class="tw"><div class="twReply"><span>replying to </span><span>@officialeuphemia</span></div></div>
+
+  <p class="tut">&lt;div class="twReply"&gt;&lt;span&gt;replying to &lt;/span&gt;&lt;span&gt;<span>@officialeuphemia</span>&lt;/span&gt;&lt;/div&gt;</p>
+
+  <p>You can put this <kbd>div</kbd> in between the header and the text.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/4d/43/fjodWVyJ_o.png"><!---
+      ---><span>ASHFOOOOORD<br/><!---
+      ---><span class="twHandle">@greengablez</span></span><!---
+  ---></div>
+      <div class="twReply"><span>replying to </span><span>@officialeuphemia</span></div>
+      <div class="twText">omg she's participating in <span>#hotboysummer</span> with the rest of us!</div>
+      <div class="twStats"><!---
+      --->❤ 5<span class="twTime"> 6:10 PM • August 12, 2017</span></div>
+      <div class="twComments ">2 people are talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;ASHFOOOOORD&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@greengablez&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> <span>&lt;div class="twReply"&gt;&lt;span&gt;replying to &lt;/span&gt;&lt;span&gt;@officialeuphemia&lt;/span&gt;&lt;/div&gt;</span><br /> &lt;div class="twText"&gt;omg she's participating in &lt;span&gt;#hotboysummer&lt;/span&gt; with the rest of us!&lt;/div&gt;<br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ 5&lt;span class="twTime"&gt; 6:10 PM • August 12, 2017&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twComments "&gt;2 people are talking about this&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>Easy peasy lemon squeezy.</p>
+
+  <p><strong>Tweets with Pictures</strong></p>
+
+  <p>Attaching a single image to your Tweet needs the class <kbd>twImage</kbd>.</p>
+
+  <p class="tut">.twImage{<br />&nbsp;width: 100%;<br />&nbsp;height: auto;<br />&nbsp;border-radius: 0.3em;<br />&nbsp;margin: 0.5em 0em 0.5em 0em;<br />}</p>
+
+  <p>This will make sure the image is positioned to fit the full length
+    of the tweet with rounded edges. Unlike Twitter, this won't clip the
+    picture considerably.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+      ---><span>Euphy<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@officialeuphemia</span></span></div>
+    <div class="twText">Having a nice day out at <span>#LakeKawaguchiHotel</span> with some friends! I really really recommend the food here! It's to die for!</div>
+    <img class="twImage" src="https://live.staticflickr.com/4061/4544742496_525dec04c0_h.jpg">
+    <div class="twStats"><!---
+    --->❤ 1.8M<span class="twTime"> 8:25 AM • August 22, 2017</span></div>
+    <div class="twComments ">135.7K people are talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;Euphy&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@officialeuphemia&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;Having a nice day out at &lt;span&gt;#LakeKawaguchiHotel&lt;/span&gt; with some friends! I really really recommend the food here! It's to die for!&lt;/div&gt;<br /><span> &lt;img class="twImage" src="IMAGE URL HERE"&gt;</span><br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ 1.8M&lt;span class="twTime"&gt; 8:25 AM • August 22, 2017&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twComments "&gt;135.7K people are talking about this&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p><strong>Quote Retweets</strong></p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/4d/43/fjodWVyJ_o.png"><!---
+      ---><span>ASHFOOOOORD<br/><!---
+      ---><span class="twHandle">@greengablez</span></span></div>
+    <div class="twText">i can't believe we're watching a fairy tale play out for real... man wish that were me</div>
+    <div class="twBody twEmbed">
+      <div class="twUserEmbed"><!---
+        ---><img class="twAvatarEmbed" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+        ---><span>Euphy<span class="tw19VerifiedEmbed">✔</span><!---
+        ---><span class="twHandleEmbed">@officialeuphemia</span></span><!---
+    ---></div>
+        <div class="twText">met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
+    </div>
+    <div class="twStats"><!---
+    --->❤ 45<span class="twTime"> 6:20 PM • August 12, 2017</span></div>
+    <div class="twComments ">35 people are talking about this</div>
+  </div>
+
+  <p>Quote retweets can be a little complex at first, but the work skin has been
+  designed to be simple and resuse as many classes as possible. There still are
+  some new classes to work with. For the outer shell of the quoted tweet, we
+  use the new class <kbd>twEmbed</kbd>.</p>
+
+  <p class="tut">.twEmbed {<br />&nbsp;min-width: 90%;<br />&nbsp;position: relative;<br />&nbsp;padding: 0.5em;<br />&nbsp;margin-top: 0.5em;<br />&nbsp;margin-bottom: 0.5em;<br />&nbsp;overflow: hidden;<br />}</p>
+
+  <p>By combining the classes <kbd>twBody</kbd> and <kbd>twEmbed</kbd>, we make
+    a proper shell for our embedded tweet.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/4d/43/fjodWVyJ_o.png"><!---
+      ---><span>ASHFOOOOORD<br/><!---
+      ---><span class="twHandle">@greengablez</span></span></div>
+    <div class="twText">i can't believe we're watching a fairy tale play out for real... man wish that were me</div>
+    <div class="twBody twEmbed">&nbsp;</div>
+    <div class="twStats"><!---
+    --->❤ 45<span class="twTime"> 6:20 PM • August 12, 2017</span></div>
+    <div class="twComments ">35 people are talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;ASHFOOOOORD&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@greengablez&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;i can't believe we're watching a fairy tale play out for real... man wish that were me&lt;/div&gt;<br /> <span>&lt;div class="twBody twEmbed"&gt;&lt;/div&gt;</span><br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ 45&lt;span class="twTime"&gt; 6:20 PM • August 12, 2017&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twComments "&gt;35 people are talking about this&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>Most of the new classes are only for formatting the embedded header, so
+  all these classes have "embed" at the end of it.</p>
+
+  <p class="tut">.twAvatarEmbed {<br /> width: 20px;<br /> height: auto;<br /> float: left;<br /> margin: 0em 0.3em .3em 0em;<br /> border-radius: 20px;<br />}</p>
+  <p class="tut">.twUserEmbed {<br /> font-weight: bold;<br /> font-size: normal;<br /> margin-bottom: 0.5em;<br />}</p>
+  <p class="tut">.twHandleEmbed {<br /> position: relative;<br /> font-weight: normal;<br /> opacity: 60%;<br /> margin-left: 0.3em;<br />}</p>
+  <p class="tut">.tw19VerifiedEmbed {<br /> position: relative;<br /> bottom: 2px;<br /> display: inline-block;<br /> font-weight: normal;<br /> text-align: center;<br /> font-size: 9px;<br /> width: 12px;<br /> height: 12px;<br /> margin-left: 0.3em;<br /> background-color: #1DA1F2;<br /> color: #fff;<br /> border-radius: 50%;<br />}</p>
+
+  <p>Together, this makes the header of the quoted retweet as follows.</p>
+
+  <div class="tw"><div class="twUserEmbed"><!---
+    ---><img class="twAvatarEmbed" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+    ---><span>Euphy<span class="tw19VerifiedEmbed">✔</span><!---
+    ---><span class="twHandleEmbed">@officialeuphemia</span></span><!---
+---></div></div>
+
+  <p class="tut">&lt;div class="twUserEmbed"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatarEmbed" src="<span>IMAGE URL HERE</span>"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;<span>Euphy&lt;span class="tw19VerifiedEmbed"&gt;✔&lt;/span&gt;</span>&lt;!---<br /> ---&gt;&lt;span class="twHandleEmbed"&gt;<span>@officialeuphemia</span>&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;</p>
+
+  <p>We insert this in the quoted retweet shell we made earlier. We use the same
+  <kbd>twText</kbd> class for the div to make our quoted text, by the way.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/4d/43/fjodWVyJ_o.png"><!---
+      ---><span>ASHFOOOOORD<br/><!---
+      ---><span class="twHandle">@greengablez</span></span></div>
+    <div class="twText">i can't believe we're watching a fairy tale play out for real... man wish that were me</div>
+    <div class="twBody twEmbed">
+      <div class="twUserEmbed"><!---
+        ---><img class="twAvatarEmbed" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+        ---><span>Euphy<span class="tw19VerifiedEmbed">✔</span><!---
+        ---><span class="twHandleEmbed">@officialeuphemia</span></span><!---
+    ---></div>
+        <div class="twText">met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
+    </div>
+    <div class="twStats"><!---
+    --->❤ 45<span class="twTime"> 6:20 PM • August 12, 2017</span></div>
+    <div class="twComments ">35 people are talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;ASHFOOOOORD&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@greengablez&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;i can't believe we're watching a fairy tale play out for real... man wish that were me&lt;/div&gt;<br /> &lt;div class="twBody twEmbed"&gt;<br /> <span>&lt;div class="twUserEmbed"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatarEmbed" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;Euphy&lt;span class="tw19VerifiedEmbed"&gt;✔&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandleEmbed"&gt;@officialeuphemia&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;met a really nice guy out in Area 11 and he has a cat named Arthur!! &lt;span&gt;#instantcrush&lt;/span&gt;&lt;/div&gt;<br /> &lt;/div&gt;</span><br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ 45&lt;span class="twTime"&gt; 6:20 PM • August 12, 2017&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twComments "&gt;35 people are talking about this&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>To add pictures to your quoted retweet, use the <kbd>twImageEmbed</kbd>.</p>
+
+  <p class="tut">.twImageEmbed{<br />&nbsp;width: 110%;<br />&nbsp;height: auto;<br />&nbsp;margin: 0.5em 0em -1em -1em;<br />}</p>
+
+  <p>Compared to <kbd>twImage</kbd>, this new class will make sure the image
+  overflows into the shell's sides. so some cropping in the borders can occur.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/4d/43/fjodWVyJ_o.png"><!---
+      ---><span>shirley's on vacay<br/><!---
+      ---><span class="twHandle">@greengablez</span></span></div>
+    <div class="twText">i'm like sitting across from you lmao but that looks so good euphy!!</div>
+    <div class="twBody twEmbed">
+      <div class="twUserEmbed"><!---
+        ---><img class="twAvatarEmbed" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+        ---><span>Euphy<span class="tw19VerifiedEmbed">✔</span><!---
+        ---><span class="twHandleEmbed">@officialeuphemia</span></span><!---
+    ---></div>
+        <div class="twText">Having a nice day out at <span>#LakeKawaguchiHotel</span> with some friends! I really really recommend the food here! It's to die for!</div>
+        <img class="twImageEmbed" src="https://live.staticflickr.com/4061/4544742496_525dec04c0_h.jpg">
+    </div>
+    <div class="twStats"><!---
+    --->❤ 1.1K<span class="twTime"> 8:25 PM • August 22, 2017</span></div>
+    <div class="twComments ">14.2K people are talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;shirley's on vacay&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@greengablez&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;i'm like sitting across from you lmao but that looks so good euphy!!&lt;/div&gt;<br /> &lt;div class="twBody twEmbed"&gt;<br /> &lt;div class="twUserEmbed"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatarEmbed" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;Euphy&lt;span class="tw19VerifiedEmbed"&gt;✔&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandleEmbed"&gt;@officialeuphemia&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;Having a nice day out at &lt;span&gt;#LakeKawaguchiHotel&lt;/span&gt; with some friends! I really really recommend the food here! It's to die for!&lt;/div&gt;<br /> <span>&lt;img class="twImageEmbed" src="IMAGE URL HERE"&gt;</span><br /> &lt;/div&gt;<br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ 4.8M&lt;span class="twTime"&gt; 6:20 PM • August 12, 2017&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twComments "&gt;192 people are talking about this&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>And this concludes the tutorial for specific add ons. Next chapter we'll be
+  learning how to write poll results.</p>
+
 </body>
 </html>

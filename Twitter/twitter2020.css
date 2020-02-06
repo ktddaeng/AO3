@@ -32,11 +32,6 @@
   margin-right: auto;
 }
 
-.twSoloPoll p {
-  margin: 0;
-  padding: 0;
-}
-
 /*Avatars are automatically formatted to be circles*/
 .twAvatar {
     width: 40px;
@@ -128,6 +123,10 @@
   margin-left: 0.3em;
 }
 
+.twText span {
+  color: #1DA1F2;
+}
+
 /*Formatting for the span of the like count and timestamp*/
 .twStats {
   width: 100%;
@@ -139,12 +138,21 @@
 }
 
 /*Formatting for the span of reply counts*/
-.twReplies {
-    width: 100%;
-    font-weight: 300;
-    padding-top: 0.5em;
-    margin-top: 0.5em;
-    border-top: .05em solid #ddd;
+.twComments {
+  width: 100%;
+  font-weight: 300;
+  padding-top: 0.5em;
+  margin-top: 0.5em;
+  border-top: .05em solid #ddd;
+  color: #1DA1F2;
+}
+
+.twReply span:first-child {
+  opacity: 60%;
+}
+
+.twReply span:last-child {
+  color: #1DA1F2;
 }
 
 .twPoll p{
@@ -159,16 +167,24 @@
   white-space: nowrap;
 }
 
+.twAPoll {
+  padding: .3em 0em .3em 0em;
+  margin: .5em 0em .5em 0em;
+  border: 0.08em solid #1DA1F2;
+  border-radius: 1em;
+  color: #1DA1F2;
+  text-align: center;
+}
+
 /*Defines the colors and formats of certain elements*/
 .twWin {background-color: #74CBFB} /* Winning option color */
 .twOpt {background-color: #e1e8ed} /* Other options color */
 .twNM { background-color: #14242C; color: #fff; border-color: #3B5364; }
-.twNM .twBody { border-color: #3B5364; }  /* Night mode */
-.twNM .twReplies { border-top: .05em solid #3B5364;}
-.twOptNM {background-color: #3B5364} /* Other Options Color Night Mode*/
+.twNM .twBody { border-color: #3B5364 }  /* Night mode */
+.twNM .twComments { border-top: .05em solid #3B5364}
+.twNM .twOpt {background-color: #3B5364} /* Other Options Color Night Mode*/
 .twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
-.twReply {opacity: 60%}
-.twLink {color: #1DA1F2;} /*hashtag and link colors*/
+/* .twLink {color: #1DA1F2} */
 
 /*Formatting for code portions*/
 .tut {

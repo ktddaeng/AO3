@@ -20,10 +20,10 @@
       ---><span>Euphy<span class="twVerified">✔</span><br/><!---
       ---><span class="twHandle">@officialeuphemia</span></span><!---
   ---></div>
-      <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+      <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
       <div class="twStats"><!---
-      --->❤ 1.2M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
-      <div class="twReplies twLink">32.2K people are talking about this</div>
+      --->❤ 1.2M<span class="twTime"> 6:06 PM • August 12, 2017</span></div>
+      <div class="twComments ">32.2K people are talking about this</div>
   </div>
 
   <p><strong>The Wrapper</strong></p>
@@ -67,11 +67,11 @@
   to stuff paragraphs and line breaks in between, breaking the code. Ideally,
   we wouldn't need these comments, but we want the code to be readable by humans.</p>
 
-  <div class="twUser"><!---
+  <div class="tw"><div class="twUser"><!---
     ---><span>Euphy<br/><!---
-    ---><span class="twHandle">@officialeuphemia</span></span></div>
+    ---><span class="twHandle">@officialeuphemia</span></span></div></div>
 
-  <p class="tut">&lt;div class="<span>twUser</span>"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;<span>TWITTER NAME HERE</span>&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="<span>twHandle</span>"&gt;<span>TWITTER HANDLE HERE</span>&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;</p>
+  <p class="tut">&lt;div class="<span>twUser</span>"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;<span>Euphy</span>&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="<span>twHandle</span>"&gt;<span>@officialeuphemia</span>&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;</p>
 
   <p>Next is the profile picture. This is one of the few parts of the work skin
     that requires external images. We will make a class for the profile called
@@ -131,23 +131,25 @@
     ---></div>
   </div>
 
-  <p class="tut">&lt;div class="tw twBody"&gt; <br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="<span>IMAGE URL HERE</span>"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;<span>TWITTER NAME HERE&lt;span class="twVerified"&gt;✔&lt;/span&gt;</span>&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;<span>TWITTER HANDLE HERE</span>&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;/div&gt;</p>
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="<span>IMAGE URL HERE</span>"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;<span>Euphy&lt;span class="twVerified"&gt;✔&lt;/span&gt;</span>&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;<span>@officialeuphemia</span>&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;/div&gt;</p>
 
   <p>So far, so good?</p>
 
   <p><strong>The Main Text</strong></p>
 
-  <p>There isn't really anything fancy here except for one thing: hashtags.</p>
+  <p>The work skin is designed to make the user experience easy to use. By
+  enclosing a div with the class <kbd>twText</kbd>, all selectors associated
+  with the class will apply.</p>
 
-  <p class="tut">.twLink {color: #1DA1F2}</p>
+  <p class="tut">.twText span {color: #1DA1F2}</p>
 
-  <p>This element uses the class <kbd>twLink</kbd> which will just change the
-    color when you enclose the hashtags in the spans of that class. It looks
-    like this:</p>
+  <p>To enable hashtag colors, enclose hashtags in a span class, and the work skin
+    will automatically color them blue, no added classes needed. This is what
+    it will look like:</p>
 
-  <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+  <div class="twText">met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
 
-  <p class="tut">&lt;div&gt;<span>TWITTER TEXT HERE</span>&lt;span class="<span>twLink</span>"&gt;<span>HASHTAGS HERE</span>&lt;/span&gt;&lt;/div&gt;</p>
+  <p class="tut">&lt;div class="twText"&gt;<span>met a really nice guy out in Area 11 and he has a cat named Arthur!!</span> &lt;span&gt;<span>#instantcrush</span>&lt;/span&gt;&lt;/div&gt;</p>
 
   <p>We can add this to the bottom of the tweet after the header.</p>
 
@@ -157,10 +159,10 @@
       ---><span>Euphy<span class="twVerified">✔</span><br/><!---
       ---><span class="twHandle">@officialeuphemia</span></span><!---
   ---></div>
-    <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+    <div class="twText">met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
   </div>
 
-  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;TWITTER NAME HERE&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;TWITTER HANDLE HERE&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> <span>&lt;div&gt;TWITTER TEXT HERE&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;Euphy&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@officialeuphemia&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> <span>&lt;div class="twText"&gt;met a really nice guy out in Area 11 and he has a cat named Arthur!! &lt;span&gt;#instantcrush&lt;/span&gt;&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
 
   <p>Now this looks more like a Tweet, and you can honestly call it a day here,
   but we still have a few more parts to make it look a bit more authentic.</p>
@@ -177,9 +179,9 @@
   <p>All it does is change the opacity of the text so it's lighter colored.</p>
 
   <div class="twStats"><!---
-  --->❤ 4.6M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
+  --->❤ 4.6M<span class="twTime"> 6:06 PM • August 12, 2017</span></div>
 
-  <p class="tut">&lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ <span>LIKES COUNT HERE</span>&lt;span class="twTime"&gt; <span>TIMESTAMP HERE</span>&lt;/span&gt;&lt;/div&gt;</p>
+  <p class="tut">&lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ <span>4.6M</span>&lt;span class="twTime"&gt; <span>6:06 PM • August 12, 2017</span>&lt;/span&gt;&lt;/div&gt;</p>
 
   <p>We put this in our Tweet as follows.</p>
 
@@ -189,24 +191,24 @@
       ---><span>Euphy<span class="twVerified">✔</span><br/><!---
       ---><span class="twHandle">@officialeuphemia</span></span><!---
   ---></div>
-      <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+      <div class="twText">met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
       <div class="twStats"><!---
-      --->❤ 1.2M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
+      --->❤ 1.2M<span class="twTime"> 6:06 PM • August 12, 2017</span></div>
   </div>
 
-  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;TWITTER HANDLE HERE&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;TWITTER HANDLE HERE&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;div&gt;TWITTER TEXT HERE&lt;/div&gt;<br /> <span>&lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ LIKES COUNT HERE&lt;span class="twTime"&gt;TIMESTAMP HERE&lt;/span&gt;&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;Euphy&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@officialeuphemia&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;met a really nice guy out in Area 11 and he has a cat named Arthur!! &lt;span&gt;#instantcrush&lt;/span&gt;&lt;/div&gt;<br /><span>&lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ 1.2M&lt;span class="twTime"&gt; 6:06 PM • August 12, 2017&lt;/span&gt;&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
 
   <p><strong>The Reply Count</strong></p>
 
-  <p>We use the <kbd>twReplies</kbd> class for this.</p>
+  <p>We use the <kbd>twComments</kbd> class for this.</p>
 
-  <p class="tut">.twReplies {<br />&nbsp;width: 100%;<br />&nbsp;font-weight: 300;<br />&nbsp;padding-top: 0.5em;<br />&nbsp;margin-top: 0.5em;<br />&nbsp;border-top: .05em solid #ddd;<br />}</p>
+  <p class="tut">.twComments {<br />&nbsp;width: 100%;<br />&nbsp;font-weight: 300;<br />&nbsp;padding-top: 0.5em;<br />&nbsp;margin-top: 0.5em;<br />&nbsp;border-top: .05em solid #ddd;<br />}</p>
 
   <p>This changes the opacity of the text and makes a border on the top.</p>
 
-  <div class="twReplies twLink">32.2K people are talking about this</div>
+  <div class="tw"><div class="twComments ">32.2K people are talking about this</div></div>
 
-  <p class="tut">&lt;div class="twReplies twLink"&gt;<span>REPLY COUNT HERE</span> people are talking about this&lt;/div&gt;</p>
+  <p class="tut">&lt;div class="twComments "&gt;<span>32.2K</span> people are talking about this&lt;/div&gt;</p>
 
   <p>We put this at the end of our main container as the finishing touch.</p>
 
@@ -216,13 +218,13 @@
       ---><span>Euphy<span class="twVerified">✔</span><br/><!---
       ---><span class="twHandle">@officialeuphemia</span></span><!---
   ---></div>
-      <div>met a really nice guy out in Area 11 and he has a cat named Arthur!! <span class="twLink">#instantcrush</span></div>
+      <div class="twText">met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
       <div class="twStats"><!---
-      --->❤ 1.2M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
-      <div class="twReplies twLink">32.2K people are talking about this</div>
+      --->❤ 1.2M<span class="twTime"> 6:06 PM • August 12, 2017</span></div>
+      <div class="twComments ">32.2K people are talking about this</div>
   </div>
 
-  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;TWITTER NAME HERE&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;TWITTER HANDLE HERE&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;div&gt;TWITTER TEXT HERE&lt;/div&gt;<br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ LIKES COUNT HERE&lt;span class="twTime"&gt;TIMESTAMP HERE&lt;/span&gt;&lt;/div&gt;<br /> <span>&lt;div class="twReplies twLink"&gt;REPLY COUNT HERE people are talking about this&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;Euphy&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@officialeuphemia&lt;/span&gt;&lt;/span&gt;&lt;!---<br /> ---&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;met a really nice guy out in Area 11 and he has a cat named Arthur!! &lt;span&gt;#instantcrush&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ 1.2M&lt;span class="twTime"&gt; 6:06 PM • August 12, 2017&lt;/span&gt;&lt;/div&gt;<br /><span> &lt;div class="twComments "&gt;32.2K people are talking about this&lt;/div&gt;</span><br /> &lt;/div&gt;</p>
 
   <p>And now we have reached the end of this tutorial with a complete Tweet.
     In the next chapter, we will learn how to integrate other kinds of content

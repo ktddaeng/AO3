@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repository: Twitter - Chapter 4</title>
+    <link rel="stylesheet" type="text/css" href="twitter2020.css">
+    <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding: 5em;
+    }
+  </style>
+</head>
+<body>
+  <p>In this tutorial, we will learn how to emulate Twitter polls. This can  be
+  useful if your fic has a narrative about polls or if you're just trying to
+  archive the poll results for interactive Twitter fics.</p>
+
+  <p>We will be using data from <a href="https://twitter.com/polls">@polls by
+    Buzzfeed.</a></p>
+
+  <p><strong>Active Polling</strong></p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://pbs.twimg.com/profile_images/660160253913382913/qgvYqknJ_400x400.jpg" width="60px"><!---
+      ---><span>polls<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@polls</span></span></div>
+    <div class="twText">Would you rather let your boss see your browsing history, or let your parents see your browsing history?</div>
+    <div class="twAPoll">Boss</div>
+    <div class="twAPoll">Parents</div>
+    <div class="twStats"><!---
+    --->742 votes • 4 hours left<br/><!---
+    --->❤ 65<span class="twTime"> 7:14 PM • Aug 15, 2018</span></div>
+    <div class="twComments ">1 person is talking about this</div>
+  </div>
+
+  <p>First we will cover how to show an active poll, meaning the results aren't in
+  or the user hasn't voted yet. We will use the class <kbd>twAPoll</kbd> to
+  accomplish this look.</p>
+
+  <p class="tut">.twAPoll {<br />&nbsp;padding: .3em 0em .3em 0em;<br />&nbsp;margin: .5em 0em .5em 0em;<br />&nbsp;border: 0.08em solid #1DA1F2;<br />&nbsp;border-radius: 1em;<br />&nbsp;color: #1DA1F2;<br />&nbsp;text-align: center;<br />}</p>
+
+  <p>This class will do all the formatting for you. All you have to do is change
+  the text to whatever you want.</p>
+
+  <div class="tw"><div class="twAPoll">Something you can choose.</div></div>
+
+
+  <p class="tut">&lt;div class="twAPoll"&gt;<span>Something you can choose.</span>&lt;/div&gt;</p>
+
+  <p>You stack these in your Tweet, just like the elements in previous tutorials.
+    No hassle.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://pbs.twimg.com/profile_images/660160253913382913/qgvYqknJ_400x400.jpg" width="60px"><!---
+      ---><span>polls<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@polls</span></span></div>
+    <div class="twText">Would you rather let your boss see your browsing history, or let your parents see your browsing history?</div>
+    <div class="twAPoll">Boss</div>
+    <div class="twAPoll">Parents</div>
+    <div class="twStats"><!---
+    --->❤ 65<span class="twTime"> 7:14 PM • Aug 15, 2018</span></div>
+    <div class="twComments ">1 person is talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="https://pbs.twimg.com/profile_images/660160253913382913/qgvYqknJ_400x400.jpg" width="60px"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;polls&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@polls&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;Would you rather let your boss see your browsing history, or let your parents see your browsing history?&lt;/div&gt;<br /> <span>&lt;div class="twAPoll"&gt;Boss&lt;/div&gt;<br /> &lt;div class="twAPoll"&gt;Parents&lt;/div&gt;</span><br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;❤ 65&lt;span class="twTime"&gt; 7:14 PM &bull; Aug 15, 2018&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twComments "&gt;1 person is talking about this&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>To add things like how many people already voted and how much time is left,
+  you add a line into the <kbd>twStats</kbd> class. Remember not to delete those
+  comments, or you'll be cursed by AO3's auto breaks.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://pbs.twimg.com/profile_images/660160253913382913/qgvYqknJ_400x400.jpg" width="60px"><!---
+      ---><span>polls<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@polls</span></span></div>
+    <div class="twText">Would you rather let your boss see your browsing history, or let your parents see your browsing history?</div>
+    <div class="twAPoll">Boss</div>
+    <div class="twAPoll">Parents</div>
+    <div class="twStats"><!---
+    --->742 votes • 4 hours left<br/><!---
+    --->❤ 65<span class="twTime"> 7:14 PM • Aug 15, 2018</span></div>
+    <div class="twComments ">1 person is talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="https://pbs.twimg.com/profile_images/660160253913382913/qgvYqknJ_400x400.jpg" width="60px"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;polls&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@polls&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;Would you rather let your boss see your browsing history, or let your parents see your browsing history?&lt;/div&gt;<br /> &lt;div class="twAPoll"&gt;Boss&lt;/div&gt;<br /> &lt;div class="twAPoll"&gt;Parents&lt;/div&gt;<br /> &lt;div class="twStats"&gt;&lt;!---<br /><span> ---&gt;742 votes &bull; 4 hours left&lt;br/&gt;&lt;!---</span><br /> ---&gt;❤ 65&lt;span class="twTime"&gt; 7:14 PM &bull; Aug 15, 2018&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twComments "&gt;1 person is talking about this&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p><strong>Polling Results</strong></p>
+
+  <p>Now what if we want to show the results of our poll? This is what the class
+  <kbd>twPoll</kbd> is for.</p>
+
+  <p class="tut">.twPoll {<br />&nbsp;padding: .3em 0em .3em 0em;<br />&nbsp;margin: .5em 0em .5em 0em;<br />&nbsp;border-radius: .3em;<br />&nbsp;white-space: nowrap;<br />}</p>
+  <p class="tut">.twPoll p{<br />&nbsp;margin: 0;<br />&nbsp;padding: 0;<br />}</p>
+
+  <p>We also have a series of classes for the percentages
+  of the votes denoted as <kbd>pN</kbd> where <kbd>N</kbd> is the percentage.
+  Here is a sample <kbd>pN</kbd> class for 25% and 75%.</p>
+
+  <p class="tut">.p25 {width: 25%}</p>
+  <p class="tut">.p75 {width: 75%}</p>
+
+  <p>I won't list all the possible classes, but it should be ranged from
+  <kbd>p0</kbd> and <kbd>p100</kbd>, whole numbers only. Sorry decimals, but
+  please round accordingly.</p>
+
+  <p>The classes <kbd>twWin</kbd> and <kbd>twOpt</kbd> will give the options
+  their colors, the former for the winner and the latter for everyone else.</p>
+
+  <p class="tut">.twWin {background-color: #74CBFB} /* Winning option color */</p>
+  <p class="tut">.twOpt {background-color: #e1e8ed} /* Other options color */</p>
+
+  <p>Now if you combine the three kinds of classes together, you can make a
+  proper bar for your chart. There's also a class to bold and pad out the
+  percentage text, but that should be easy to understand.</p>
+
+  <div class="tw"><div class="twPoll twWin p75"><span class="twBold">75%</span>Winner</div></div>
+  <p class="tut">&lt;div class="<span>twPoll twWin p75</span>"&gt;&lt;span class="twBold"&gt;75%&lt;/span&gt;Winner&lt;/div&gt;</p>
+
+  <div class="tw"><div class="twPoll twOpt p25"><span class="twBold">25%</span>Not a Winner</div></div>
+  <p class="tut">&lt;div class="<span>twPoll twOpt p25</span>"&gt;&lt;span class="twBold"&gt;25%&lt;/span&gt;Not a Winner&lt;/div&gt;</p>
+
+  <p>These bars can be stacked independently within the Tweet, just like the
+  active poll bars.</p>
+
+  <div class="tw twBody">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://pbs.twimg.com/profile_images/660160253913382913/qgvYqknJ_400x400.jpg" width="60px"><!---
+      ---><span>polls<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@polls</span></span></div>
+    <div class="twText">What is the best kind of pie?</div>
+    <div class="twPoll twWin p52"><span class="twBold">52%</span>Apple</div>
+    <div class="twPoll twOpt p14"><span class="twBold">14.2%</span>Banana Cream</div>
+    <div class="twPoll twOpt p9"><span class="twBold">9.4%</span>Meat</div>
+    <div class="twPoll twOpt p24"><span class="twBold">24.4%</span>Pumpkin</div>
+    <div class="twStats"><!---
+    --->5484 votes • Final results<br/><!---
+    --->❤ 65<span class="twTime"> 7:14 PM • Aug 15, 2018</span></div>
+    <div class="twComments ">20 people are talking about this</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twUser"&gt;&lt;!---<br /> ---&gt;&lt;img class="twAvatar" src="IMAGE URL HERE" width="60px"&gt;&lt;!---<br /> ---&gt;&lt;span&gt;polls&lt;span class="twVerified"&gt;✔&lt;/span&gt;&lt;br/&gt;&lt;!---<br /> ---&gt;&lt;span class="twHandle"&gt;@polls&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twText"&gt;What is the best kind of pie?&lt;/div&gt;<br /> <span>&lt;div class="twPoll twWin p52"&gt;&lt;span class="twBold"&gt;52%&lt;/span&gt;Apple&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p14"&gt;&lt;span class="twBold"&gt;14.2%&lt;/span&gt;Banana Cream&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p9"&gt;&lt;span class="twBold"&gt;9.4%&lt;/span&gt;Meat&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p24"&gt;&lt;span class="twBold"&gt;24.4%&lt;/span&gt;Pumpkin&lt;/div&gt;</span><br /> &lt;div class="twStats"&gt;&lt;!---<br /> ---&gt;5484 votes &bull; Final results&lt;br/&gt;&lt;!---<br /> ---&gt;❤ 65&lt;span class="twTime"&gt; 7:14 PM &bull; Aug 15, 2018&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twComments "&gt;20 people are talking about this&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>Beautiful, isn't it?</p>
+
+  <p><strong>Simplified Polling</strong></p>
+
+  <p>In the case where you only want the poll, you don't need to include the
+    header or the additional stats.</p>
+
+  <div class="tw twBody">
+    <div class="twText">Which show that ended in 2015 will you miss the most? <span>#BestOf2015</span></div>
+    <div class="twPoll twWin p54"><span class="twBold">54%</span>Parks and Rec</div>
+    <div class="twPoll twOpt p10"><span class="twBold">10.4%</span>Mad Men</div>
+    <div class="twPoll twOpt p9"><span class="twBold">9%</span>Parenthood</div>
+    <div class="twPoll twOpt p26"><span class="twBold">26.6%</span>Glee</div>
+    <div class="twStats">14,930 votes • Final results</div>
+  </div>
+
+  <p class="tut">&lt;div class="tw twBody"&gt;<br /> &lt;div class="twText"&gt;Which show that ended in 2015 will you miss the most? &lt;span&gt;#BestOf2015&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twPoll twWin p54"&gt;&lt;span class="twBold"&gt;54%&lt;/span&gt;Parks and Rec&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p10"&gt;&lt;span class="twBold"&gt;10.4%&lt;/span&gt;Mad Men&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p9"&gt;&lt;span class="twBold"&gt;9%&lt;/span&gt;Parenthood&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p26"&gt;&lt;span class="twBold"&gt;26.6%&lt;/span&gt;Glee&lt;/div&gt;<br /> &lt;div class="twStats"&gt;14,930 votes &bull; Final results&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>If that's not simple enough, you can also remove the border so the poll
+  is seamlessly integrated into the fic. Just remove <kbd>twBody</kbd> from
+  the first div.</p>
+
+  <div class="tw">
+    <div class="twText">Which show that ended in 2015 will you miss the most? <span>#BestOf2015</span></div>
+    <div class="twPoll twWin p54"><span class="twBold">54%</span>Parks and Rec</div>
+    <div class="twPoll twOpt p10"><span class="twBold">10.4%</span>Mad Men</div>
+    <div class="twPoll twOpt p9"><span class="twBold">9%</span>Parenthood</div>
+    <div class="twPoll twOpt p26"><span class="twBold">26.6%</span>Glee</div>
+    <div class="twStats">14,930 votes • Final results</div>
+  </div>
+
+  <p class="tut">&lt;div <span>class="tw"</span>&gt;<br /> &lt;div class="twText"&gt;Which show that ended in 2015 will you miss the most? &lt;span&gt;#BestOf2015&lt;/span&gt;&lt;/div&gt;<br /> &lt;div class="twPoll twWin p54"&gt;&lt;span class="twBold"&gt;54%&lt;/span&gt;Parks and Rec&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p10"&gt;&lt;span class="twBold"&gt;10.4%&lt;/span&gt;Mad Men&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p9"&gt;&lt;span class="twBold"&gt;9%&lt;/span&gt;Parenthood&lt;/div&gt;<br /> &lt;div class="twPoll twOpt p26"&gt;&lt;span class="twBold"&gt;26.6%&lt;/span&gt;Glee&lt;/div&gt;<br /> &lt;div class="twStats"&gt;14,930 votes &bull; Final results&lt;/div&gt;<br /> &lt;/div&gt;</p>
+
+  <p>You can also remove twBody to remove the border for regular Tweets, too,
+  in case you want that seamless look, too.</p>
+
+  <div class="tw">
+    <div class="twUser"><!---
+      ---><img class="twAvatar" src="https://images2.imgbox.com/68/f6/3IaTRbkQ_o.png"><!---
+      ---><span>Euphy<span class="twVerified">✔</span><br/><!---
+      ---><span class="twHandle">@officialeuphemia</span></span><!---
+  ---></div>
+      <div class="twText">met a really nice guy out in Area 11 and he has a cat named Arthur!! <span>#instantcrush</span></div>
+      <div class="twStats"><!---
+      --->❤ 1.2M<span class="twTime"> 6:06 PM - August 12, 2017</span></div>
+      <div class="twComments ">32.2K people are talking about this</div>
+  </div>
+
+  <p>And this completes the tutorial for polls. Next, we'll explore how Night
+  Mode works.</p>
+
+</body>
+</html>

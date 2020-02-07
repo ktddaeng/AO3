@@ -1,4 +1,4 @@
-/*The general Tweet container. Sets fonts and other fancy formatting.*/
+/*The general Tweet container.*/
 .tw {
   max-width: 400px;
   margin-left: auto;
@@ -23,13 +23,6 @@
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   overflow: hidden;
-}
-
-/*Body formatting for solo Twitter polling*/
-.twSoloPoll {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*Avatars are automatically formatted to be circles*/
@@ -81,7 +74,7 @@
   border-radius: 50%;
 }
 
-/* Image */
+/* Images */
 .twImage{
     width: 100%;
     height: auto;
@@ -95,7 +88,7 @@
     margin: 0.5em 0em -1em -1em;
 }
 
-/* Text */
+/* Formatting for Header and Text */
 .twUser {
   font-weight: bold;
   font-size: larger;
@@ -137,7 +130,7 @@
     padding: 0em 0em 0em 0.6em;
 }
 
-/*Formatting for the span of reply counts*/
+/*Formatting for Comments*/
 .twComments {
   width: 100%;
   font-weight: 300;
@@ -147,6 +140,7 @@
   color: #1DA1F2;
 }
 
+/*Formatting for Reply Tag*/
 .twReply span:first-child {
   opacity: 60%;
 }
@@ -155,6 +149,7 @@
   color: #1DA1F2;
 }
 
+/*Formatting for Polling Results*/
 .twPoll p{
   margin: 0;
   padding: 0;
@@ -167,6 +162,7 @@
   white-space: nowrap;
 }
 
+ /*Formatting for Active Polling*/
 .twAPoll {
   padding: .3em 0em .3em 0em;
   margin: .5em 0em .5em 0em;
@@ -179,12 +175,12 @@
 /*Defines the colors and formats of certain elements*/
 .twWin {background-color: #74CBFB} /* Winning option color */
 .twOpt {background-color: #e1e8ed} /* Other options color */
+/* Night mode */
 .twNM { background-color: #14242C; color: #fff; border-color: #3B5364; }
-.twNM .twBody { border-color: #3B5364 }  /* Night mode */
+.twNM .twBody { border-color: #3B5364 }
 .twNM .twComments { border-top: .05em solid #3B5364}
 .twNM .twOpt {background-color: #3B5364} /* Other Options Color Night Mode*/
 .twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
-/* .twLink {color: #1DA1F2} */
 
 /*Formatting for code portions*/
 .tut {

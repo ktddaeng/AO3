@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repository: Twitter CSS Dump</title>
+    <link rel="stylesheet" type="text/css" href="twitter2020.css">
+    <style>
+    * {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p class="tut"><span>/*The general Tweet container.*/</span><br />
+  .tw {<br />
+  max-width: 400px;<br />
+  margin-left: auto;<br />
+  margin-right: auto;<br />
+  padding: 1em;<br />
+  }</p>
+
+  <p class="tut">.tw p {<br />
+  margin: 0;<br />
+  padding: 0;<br />
+  }</p>
+
+  <p class="tut">.twBody {<br />
+  border: .05em solid #ddd;<br />
+  border-radius: .3em;<br />
+  }</p>
+
+  <p class="tut">.twEmbed {<br />
+  min-width: 90%;<br />
+  position: relative;<br />
+  padding: 0.5em;<br />
+  margin-top: 0.5em;<br />
+  margin-bottom: 0.5em;<br />
+  overflow: hidden;<br />
+  }</p>
+
+  <p class="tut"><span>/*Avatars are automatically formatted to be circles*/</span><br />
+  .twAvatar {<br />
+  width: 40px;<br />
+  height: auto;<br />
+  float: left;<br />
+  margin-right: 0.3em;<br />
+  border-radius: 20px;<br />
+  }</p>
+
+  <p class="tut">.twAvatarEmbed {<br />
+  width: 20px;<br />
+  height: auto;<br />
+  float: left;<br />
+  margin: 0em 0.3em .3em 0em;<br />
+  border-radius: 20px;<br />
+  }</p>
+
+  <p class="tut">
+    <span>/*Formatting for the Verified Icons*/</span>
+  </p>
+
+  <p class="tut">.twVerified {<br />
+  position: relative;<br />
+  bottom: 2px;<br />
+  display: inline-block;<br />
+  font-weight: normal;<br />
+  text-align: center;<br />
+  font-size: 10px;<br />
+  width: 15px;<br />
+  height: 15px;<br />
+  margin-left: 0.3em;<br />
+  background-color: #1DA1F2;<br />
+  color: #fff;<br />
+  border-radius: 50%;<br />
+  }</p>
+
+  <p class="tut">.tw19VerifiedEmbed {<br />
+  position: relative;<br />
+  bottom: 2px;<br />
+  display: inline-block;<br />
+  font-weight: normal;<br />
+  text-align: center;<br />
+  font-size: 9px;<br />
+  width: 12px;<br />
+  height: 12px;<br />
+  margin-left: 0.3em;<br />
+  background-color: #1DA1F2;<br />
+  color: #fff;<br />
+  border-radius: 50%;<br />
+  }</p>
+
+  <p class="tut"><span>/* Images */</span><br />
+  .twImage{<br />
+  width: 100%;<br />
+  height: auto;<br />
+  border-radius: 0.3em;<br />
+  margin: 0.5em 0em 0.5em 0em;<br />
+  }</p>
+
+  <p class="tut">.twImageEmbed{<br />
+  width: 110%;<br />
+  height: auto;<br />
+  margin: 0.5em 0em -1em -1em;<br />
+  }</p>
+
+  <p class="tut"><span>/* Formatting for Header and Text */</span><br />
+  .twUser {<br />
+  font-weight: bold;<br />
+  font-size: larger;<br />
+  margin-bottom: -0.1em;<br />
+  }</p>
+
+  <p class="tut">.twUserEmbed {<br />
+  font-weight: bold;<br />
+  font-size: normal;<br />
+  margin-bottom: 0.5em;<br />
+  }</p>
+
+  <p class="tut">.twHandle {<br />
+  position: relative;<br />
+  top: -0.5em;<br />
+  font-weight: normal;<br />
+  font-size: smaller;<br />
+  opacity: 0.6;<br />
+  }</p>
+
+  <p class="tut">.twHandleEmbed {<br />
+  position: relative;<br />
+  font-weight: normal;<br />
+  opacity: 0.6;<br />
+  margin-left: 0.3em;<br />
+  }</p>
+
+  <p class="tut">.twText span {<br />
+  color: #1DA1F2;<br />
+  }</p>
+
+  <p class="tut"><span>/*Formatting for the span of the like count and timestamp*/</span><br />
+  .twStats {<br />
+  width: 100%;<br />
+  opacity: 0.6;<br />
+  }</p>
+
+  <p class="tut">.twTime {<br />
+  padding: 0em 0em 0em 0.6em;<br />
+  }</p>
+
+  <p class="tut"><span>/*Formatting for Comments*/</span><br />
+  .twComments {<br />
+  width: 100%;<br />
+  font-weight: 300;<br />
+  padding-top: 0.5em;<br />
+  margin-top: 0.5em;<br />
+  border-top: .05em solid #ddd;<br />
+  color: #1DA1F2;<br />
+  }</p>
+
+  <p class="tut"><span>/*Formatting for Reply Tag*/</span><br />
+  .twReply span:first-child {<br />
+  opacity: 0.6;<br />
+  }</p>
+
+  <p class="tut">.twReply span:last-child {<br />
+  color: #1DA1F2;<br />
+  }</p>
+
+  <p class="tut"><span>/*Formatting for Polling Results*/</span><br />
+  .twPoll p{<br />
+  margin: 0;<br />
+  padding: 0;<br />
+  }</p>
+
+  <p class="tut">.twPoll {<br />
+  padding: .3em 0em .3em 0em;<br />
+  margin: .5em 0em .5em 0em;<br />
+  border-radius: .3em;<br />
+  white-space: nowrap;<br />
+  }</p>
+
+  <p class="tut"><span>/*Formatting for Active Polling*/</span><br />
+  .twAPoll {<br />
+  padding: .3em 0em .3em 0em;<br />
+  margin: .5em 0em .5em 0em;<br />
+  border: 0.08em solid #1DA1F2;<br />
+  border-radius: 1em;<br />
+  color: #1DA1F2;<br />
+  text-align: center;<br />
+  }</p>
+
+  <p class="tut"><span>/*Defines the colors and formats of certain elements*/</span><br />
+  .twWin {background-color: #74CBFB} /* Winning option color */<br />
+  .twOpt {background-color: #e1e8ed} /* Other options color */<br />
+  /* Night mode */<br />
+  .twNM { background-color: #14242C; color: #fff; border-color: #3B5364; }<br />
+  .twNM .twBody { border-color: #3B5364 }<br />
+  .twNM .twComments { border-top: .05em solid #3B5364}<br />
+  .twNM .twOpt {background-color: #3B5364} /* Other Options Color Night Mode*/<br />
+  .twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}</p>
+
+  <p class="tut"><span>/*Percentage Presets*/</span><br />
+  .p0 {width: 0%}<br />
+  .p1 {width: 1%}<br />
+  .p2 {width: 2%}<br />
+  .p3 {width: 3%}<br />
+  .p4 {width: 4%}<br />
+  .p5 {width: 5%}<br />
+  .p6 {width: 6%}<br />
+  .p7 {width: 7%}<br />
+  .p8 {width: 8%}<br />
+  .p9 {width: 9%}<br />
+  .p10 {width: 10%}<br />
+  .p11 {width: 11%}<br />
+  .p12 {width: 12%}<br />
+  .p13 {width: 13%}<br />
+  .p14 {width: 14%}<br />
+  .p15 {width: 15%}<br />
+  .p16 {width: 16%}<br />
+  .p17 {width: 17%}<br />
+  .p18 {width: 18%}<br />
+  .p19 {width: 19%}<br />
+  .p20 {width: 20%}<br />
+  .p21 {width: 21%}<br />
+  .p22 {width: 22%}<br />
+  .p23 {width: 23%}<br />
+  .p24 {width: 24%}<br />
+  .p25 {width: 25%}<br />
+  .p26 {width: 26%}<br />
+  .p27 {width: 27%}<br />
+  .p28 {width: 28%}<br />
+  .p29 {width: 29%}<br />
+  .p30 {width: 30%}<br />
+  .p31 {width: 31%}<br />
+  .p32 {width: 32%}<br />
+  .p33 {width: 33%}<br />
+  .p34 {width: 34%}<br />
+  .p35 {width: 35%}<br />
+  .p36 {width: 36%}<br />
+  .p37 {width: 37%}<br />
+  .p38 {width: 38%}<br />
+  .p39 {width: 39%}<br />
+  .p40 {width: 40%}<br />
+  .p41 {width: 41%}<br />
+  .p42 {width: 42%}<br />
+  .p43 {width: 43%}<br />
+  .p44 {width: 44%}<br />
+  .p45 {width: 45%}<br />
+  .p46 {width: 46%}<br />
+  .p47 {width: 47%}<br />
+  .p48 {width: 48%}<br />
+  .p49 {width: 49%}<br />
+  .p50 {width: 50%}<br />
+  .p51 {width: 51%}<br />
+  .p52 {width: 52%}<br />
+  .p53 {width: 53%}<br />
+  .p54 {width: 54%}<br />
+  .p55 {width: 55%}<br />
+  .p56 {width: 56%}<br />
+  .p57 {width: 57%}<br />
+  .p58 {width: 58%}<br />
+  .p59 {width: 59%}<br />
+  .p60 {width: 60%}<br />
+  .p61 {width: 61%}<br />
+  .p62 {width: 62%}<br />
+  .p63 {width: 63%}<br />
+  .p64 {width: 64%}<br />
+  .p65 {width: 65%}<br />
+  .p66 {width: 66%}<br />
+  .p67 {width: 67%}<br />
+  .p68 {width: 68%}<br />
+  .p69 {width: 69%}<br />
+  .p70 {width: 70%}<br />
+  .p71 {width: 71%}<br />
+  .p72 {width: 72%}<br />
+  .p73 {width: 73%}<br />
+  .p74 {width: 74%}<br />
+  .p75 {width: 75%}<br />
+  .p76 {width: 76%}<br />
+  .p77 {width: 77%}<br />
+  .p78 {width: 78%}<br />
+  .p79 {width: 79%}<br />
+  .p80 {width: 80%}<br />
+  .p81 {width: 81%}<br />
+  .p82 {width: 82%}<br />
+  .p83 {width: 83%}<br />
+  .p84 {width: 84%}<br />
+  .p85 {width: 85%}<br />
+  .p86 {width: 86%}<br />
+  .p87 {width: 87%}<br />
+  .p88 {width: 88%}<br />
+  .p89 {width: 89%}<br />
+  .p90 {width: 90%}<br />
+  .p91 {width: 91%}<br />
+  .p92 {width: 92%}<br />
+  .p93 {width: 93%}<br />
+  .p94 {width: 94%}<br />
+  .p95 {width: 95%}<br />
+  .p96 {width: 96%}<br />
+  .p97 {width: 97%}<br />
+  .p98 {width: 98%}<br />
+  .p99 {width: 99%}<br />
+  .p100 {width: 100%}</p>
+    </body>
+</html>

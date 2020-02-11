@@ -106,13 +106,13 @@
   top: -0.5em;
   font-weight: normal;
   font-size: smaller;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .twHandleEmbed {
   position: relative;
   font-weight: normal;
-  opacity: 60%;
+  opacity: 0.6;
   margin-left: 0.3em;
 }
 
@@ -123,7 +123,7 @@
 /*Formatting for the span of the like count and timestamp*/
 .twStats {
   width: 100%;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .twTime {
@@ -142,7 +142,7 @@
 
 /*Formatting for Reply Tag*/
 .twReply span:first-child {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .twReply span:last-child {

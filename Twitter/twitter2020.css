@@ -173,12 +173,13 @@
 }
 
 /*Defines the colors and formats of certain elements*/
-.twWin {background-color: #74CBFB} /* Winning option color */
-.twOpt {background-color: #e1e8ed} /* Other options color */
+.twWin {background-color: rgba(0, 149, 235, 0.5)} /* Winning option color */
+.twOpt {background-color: rgba(187, 198, 206, 0.5)} /* Other options color */
 /* Night mode */
 .twNM { background-color: #14242C; color: #fff; border-color: #3B5364; }
 .twNM .twBody { border-color: #3B5364 }
 .twNM .twComments { border-top: .05em solid #3B5364}
+.twNM .twWin {background-color: #74cbfb}
 .twNM .twOpt {background-color: #3B5364} /* Other Options Color Night Mode*/
 .twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
 

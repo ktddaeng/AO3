@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<p>The next series of chapters will be about site skins, mostly because I'm thinking
+of a fun side project: a tool for constructing site skins and lowering the barrier
+for the typical AO3 user because I believe in making AO3's features more accessible
+to those who aren't tech savvy. It's a step up from my previous project, the
+<a href="https://archiveofourown.org/works/22517134/chapters/53806336">Tweet Skin Builder</a>,
+so this will be a great challenge.</p>
+
+<p>There will be many factors to account for, like what tools I need to make this
+  tool, and all the elements of an AO3 site skin.
+  I guess we call this research? Anyways, I honestly don't know when or if I'll
+finish this tool, but I still want to share whatever knowledge I come across.</p>
+
+<p>That said, the next chapters will be semi-documentation on site skins, to
+  teach myself and any potential readers. Consider this also a preview
+  for the potential features I want to take into account for the project.</p>
+
+<h1>Site Skins Part 1: Metrics</h1>
+
+<p>In this tutorial I will teach you how to hide your metrics, meaning the numbers of
+kudos, hits, bookmarks, comments, etc. While there are things
+like TamperMonkey scripts and other addons that can accomplish this, you can
+actually do this on your own, no extras required.</p>
+
+<h3>Intent</h3>
+
+<p>There is a good reason to hide your metrics from yourself. For me, I get
+anxious about how many people have read my fic, and I get easily discouraged looking at
+other people's numbers in comparison to my own. Writing fanfiction has always been first
+and foremost a hobby for me, and I personally don't want to care how popular my fics are, so I started hiding likes
+  and kudos from myself whenever I'm logged in. It's been a few months, and I
+think I've felt much more relaxed and free to read and write when I am not
+aware of the numbers. That doesn't mean fics should never show metrics, but we
+should be allowed the option to see them or not.</p>
+
+<p>I dedicate this tutorial is for those who want a way to make AO3 less
+  stressful by not thinking about the numbers.</p>
+
+<h3>Under the Hood</h3>
+
+<p>First we must identify what parts we are trying to change in the HTML code
+with CSS. Let's examine all the parts of a typical statistics container, which
+happens to be a description list (dl).</p>
+
+<p class="tut">
+  &lt;dl class="stats"&gt;<br />
+  &lt;dt class="language"&gt;Language:&lt;/dt&gt;<br />
+  &lt;dd class="language"&gt;English&lt;/dd&gt;<br />
+  &lt;dt class="words"&gt;Words:&lt;/dt&gt;<br />
+  &lt;dd class="words"&gt;69,344&lt;/dd&gt;<br />
+  &lt;dt class="chapters"&gt;Chapters:&lt;/dt&gt;<br />
+  &lt;dd class="chapters"&gt;&lt;a href="REDACTED"&gt;11&lt;/a&gt;/?&lt;/dd&gt;<br />
+  &lt;dt class="comments"&gt;Comments:&lt;/dt&gt;<br />
+  <span>&lt;dd class="comments"&gt;&lt;a href="REDACTED"&gt;17&lt;/a&gt;&lt;/dd&gt;</span><br />
+  &lt;dt class="kudos"&gt;Kudos:&lt;/dt&gt;<br />
+  <span>&lt;dd class="kudos"&gt;&lt;a href="REDACTED"&gt;37&lt;/a&gt;&lt;/dd&gt;</span><br />
+  &lt;dt class="bookmarks"&gt;Bookmarks:&lt;/dt&gt;<br />
+  <span>&lt;dd class="bookmarks"&gt;&lt;a href="REDACTED"&gt;6&lt;/a&gt;&lt;/dd&gt;</span><br />
+  &lt;dt class="hits"&gt;Hits:&lt;/dt&gt;<br />
+  <span>&lt;dd class="hits"&gt;920&lt;/dd&gt;</span><br />
+  &lt;/dl&gt;</p>
+
+  <p>There's a lot to take in here, but I've highlighted the important parts in red, or at least
+  the parts I believe are the most common anxiety-inducing metrics. Personally,
+  I didn't feel much anxiety from comment and bookmark counts, but we will explore hiding
+  those features nonetheless.</p>
+
+  <p>Notice how these elements have unique classes and they are also contained
+  in description definition tags (dd). This makes selecting these elements
+  much easier as we proceed.</p>
+
+  <h3>The Code</h3>
+
+  <p>I assume you have some understanding on how CSS Selectors work. If not,
+  I strongly suggest you to look this topic up before beginning any tutorial
+  on AO3 site skins.</p>
+
+  <p>To start off, let's learn how to hide hits. We want to select the "hits"
+  container containing the number of hits and use CSS to hide its contents. We
+  write the CSS rule-set as follows:</p>
+
+  <p class="tut">
+    dd.hits{<br />  visibility: hidden;<br />}
+  </p>
+
+  <p>See? Very short. Very quick. Very easy. But what's going on here?</p>
+
+  <p>We are selecting all "dd" tags with the class named "hits", then we are
+  hiding its contents. Most of you may be more familiar with <span class="tut">display: none</span>
+  to hide elements, but as you all know, AO3 is very finicky about what you can
+  and cannot change, so this property will not hide the metrics as we want to.</p>
+
+  <p>Instead, we are using the <span class="tut">visibility</span> property. Compared to
+  <span class="tut">display</span>, which behaves as if the element was never there in
+  the first place, <span class="tut">visibility</span> will still take up space where
+  the element should have been.</p>
+
+  <p>Here is a screenshot of what it should look like with hits hidden.</p>
+
+  <p align="center"><img src="https://images2.imgbox.com/30/4a/M9PZHYzi_o.png" alt="screenshot of hits hidden"></p>
+
+  <p>As you can see, the number of hits no longer appears when the page loads, but
+  because this is using the visibility property, there's a weird blank space instead.
+  It's not pretty, but it does the job.</p>
+
+  <p>Now let's try to hide more than one element, because kudos and hits both
+  are anxiety inducing for me. You can easily do this by adding selectors to that CSS
+  rule-set as follows:</p>
+
+  <p class="tut">
+      dd.kudos,<br />dd.hits {<br /> visibility: hidden;<br />}
+  </p>
+
+  <p>This is a neat and tidy way to apply similar rules to many types of
+  elements at the same time, and in programming, it is very important to avoid
+  redundancy. The end result of this new rule-set is this:</p>
+
+  <p align="center"><img src="https://images2.imgbox.com/cc/8e/OcwKHV3J_o.png" alt="screenshot of hits and kudos hidden"></p>
+
+  <p>If you want to hide more elements, you can continue to add selectors by separating
+  them with commas. Here is template CSS code that hides all potentially
+  anxiety-inducing metrics. Simply remove the selectors you do not mind seeing
+  and paste it into your site skin.</p>
+
+  <p class="tut">
+      dd.comments,<br />
+      dd.kudos,<br />
+      dd.bookmarks,<br />
+      dd.hits {<br /> visibility: hidden;<br />}
+  </p>
+
+  <p>This marks the end of the tutorial for now. Thank you for reading this far,
+  and I hope those who find this tutorial found this useful.</p>
+
+  </body>
+</html>

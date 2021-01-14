@@ -1,3 +1,8 @@
+.imgsize {
+  max-width: 600px;
+  height: auto;
+}
+
 /*The general Tweet container.*/
 .tw {
   max-width: 400px;
@@ -59,7 +64,7 @@
   border-radius: 50%;
 }
 
-.tw19VerifiedEmbed {
+.twVerifiedEmbed {
   position: relative;
   bottom: 2px;
   display: inline-block;
